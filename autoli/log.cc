@@ -1,4 +1,13 @@
-# include "log.h"
+#include "log.h"
+#include <map>
+#include <iostream>
+#include <functional>
+#include <time.h>
+#include <string.h>
+#include "config.h"
+#include "util.h"
+#include "macro.h"
+#include "env.h"
 
 namespace autoli {
 	const char* LogLevel::ToString(LogLevel::Level level) {
@@ -178,15 +187,19 @@ namespace autoli {
 			}
 		}
 	}
-	void Logger::log(LogLevel::Level level, LogEvent::ptr event){
-		if (level >= m_level)
-		{
-			for (auto& i :m_appenders)
-			{
-				i->log(level, event);
-			}
-		}
-}
+    void Logger::log(LogLevel::Level level, LogEvent::ptr event) {
+        if(level >= m_level) {
+            auto self = shared_from_this();
+            MutexType::Lock lock(m_mutex);
+            if(!m_appenders.empty()) {
+                for(auto& i : m_appenders) {
+                    i->log(self, level, event);
+                }
+            } else if(m_root) {
+                m_root->log(level, event);
+            }
+        }
+    }
 	void Logger::debug(LogEvent::ptr event) {
 		log(LogLevel::DEBUG, event);
 }
@@ -202,30 +215,73 @@ namespace autoli {
 	void Logger::fatal(LogEvent::ptr event) {
 		log(LogLevel::FATAL, event);
 }
-	FileLogAppender::FileLogAppender(const std::string& filename):m_filename(filename)
-	{
 
-	}
-	void FileLogAppender::log(LogLevel::Level level, LogEvent::ptr event) {
-		if (level >= m_level)
-		{
-			m_filestream << m_formatter.format(event);
-		}
-	}
-	bool FileLogAppender::reopen() {
-		if (m_filestream)
-		{
-			m_filestream.close();
-		}
-		m_filestream.open(m_filename);
-		return !!m_filestream; //这样才是bool值？
-	}
-	void StdoutLogAppender::log(LogLevel::Level level, LogEvent::ptr event) {
-		if (level >= m_level)
-		{
-			std::cout << m_formatter.format(event);
-		}
-	}
+    FileLogAppender::FileLogAppender(const std::string& filename)
+            :m_filename(filename) {
+        reopen();
+    }
+
+    void FileLogAppender::log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) {
+        if(level >= m_level) {
+            uint64_t now = event->getTime();
+            if(now >= (m_lastTime + 3)) {
+                reopen();
+                m_lastTime = now;
+            }
+            MutexType::Lock lock(m_mutex);
+            //if(!(m_filestream << m_formatter->format(logger, level, event))) {
+            if(!m_formatter->format(m_filestream, logger, level, event)) {
+                std::cout << "error" << std::endl;
+            }
+        }
+    }
+
+    std::string FileLogAppender::toYamlString() {
+        MutexType::Lock lock(m_mutex);
+        YAML::Node node;
+        node["type"] = "FileLogAppender";
+        node["file"] = m_filename;
+        if(m_level != LogLevel::UNKNOW) {
+            node["level"] = LogLevel::ToString(m_level);
+        }
+        if(m_hasFormatter && m_formatter) {
+            node["formatter"] = m_formatter->getPattern();
+        }
+        std::stringstream ss;
+        ss << node;
+        return ss.str();
+    }
+
+    bool FileLogAppender::reopen() {
+        MutexType::Lock lock(m_mutex);
+        if(m_filestream) {
+            m_filestream.close();
+        }
+        return FSUtil::OpenForWrite(m_filestream, m_filename, std::ios::app);
+    }
+
+    void StdoutLogAppender::log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) {
+        if(level >= m_level) {
+            MutexType::Lock lock(m_mutex);
+            m_formatter->format(std::cout, logger, level, event);
+        }
+    }
+
+    std::string StdoutLogAppender::toYamlString() {
+        MutexType::Lock lock(m_mutex);
+        YAML::Node node;
+        node["type"] = "StdoutLogAppender";
+        if(m_level != LogLevel::UNKNOW) {
+            node["level"] = LogLevel::ToString(m_level);
+        }
+        if(m_hasFormatter && m_formatter) {
+            node["formatter"] = m_formatter->getPattern();
+        }
+        std::stringstream ss;
+        ss << node;
+        return ss.str();
+    }
+
 
 	LogFormatter::LogFormatter(const std::string& pattern)
 		:m_pattern(pattern) {
