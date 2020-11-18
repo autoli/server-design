@@ -5,7 +5,7 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O3 -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function")
 set(LIB_SRC
         autoli/log.cc)
-add_library(autoli  $HARED  ${LIB_SRC})
+add_library(autoli  SHARED  ${LIB_SRC})
 #add_library(autoli_static STATIC ${LIB_SRC})
 #SET_TARGET_PROPERTIES(autoli_static PROPERTIES OUTPUT_NAME "autoli")
 add_executable(test tests/test.cc)
