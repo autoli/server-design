@@ -67,8 +67,9 @@ namespace autoli {
             * @param[in] time 日志事件(秒)
             * @param[in] thread_name 线程名称
             */
-        LogEvent(/*std::shared_ptr <Logger> logger, LogLevel::Level level, const char *file, int32_t line,
-                 uint32_t elapse, uint32_t thread_id, uint32_t fiber_id, uint64_t time, const std::string &thread_name*/);
+        LogEvent(std::shared_ptr <Logger> logger, LogLevel::Level level, const char *file, int32_t line,
+                 uint32_t elapse, uint32_t thread_id, uint32_t fiber_id, uint64_t time, const std::string &thread_name);
+        //LogEvent(const char* file,int32_t m_line,uint32_t elapse,uint32_t thread_id,uint32_t fiber_id, uint64_t time);
 
         /**
             * @brief 返回文件名
@@ -113,7 +114,7 @@ namespace autoli {
         /**
             * @brief 返回日志器
             */
-        std::shared_ptr<Logger> getLogger() const { return m_logger; }
+        std::shared_ptr<Logger> getLogger() const {  return m_logger; }
 
         /**
             * @brief 返回日志级别
@@ -313,8 +314,6 @@ namespace autoli {
 
     public:
         typedef std::shared_ptr <Logger> ptr;
-
-
         /**
          * @brief 构造函数
          * @param[in] name 日志器名称

@@ -2,7 +2,7 @@
 #include <map>
 #include <iostream>
 #include <functional>
-//#include <time.h>
+#include <time.h>
 #include <string.h>
 //#include "config.h"
 //#include "util.h"
@@ -172,10 +172,39 @@ namespace autoli {
 		std::string m_string;
 	};
 
-	Logger::Logger(const std::string& name) :m_name(name){
+/*    LogEvent::LogEvent(const char* file,int32_t line,uint32_t elapse,uint32_t thread_id,uint32_t fiber_id, uint64_t time)
+    :m_file(file)
+    ,m_line(line)
+    ,m_elapse(elapse)
+    ,m_threadId(thread_id)
+    ,m_fiberId(fiber_id)
+    ,m_time(time){
 
+    }*/
+
+    LogEvent::LogEvent(std::shared_ptr<Logger> logger, LogLevel::Level level
+            ,const char* file, int32_t line, uint32_t elapse
+            ,uint32_t thread_id, uint32_t fiber_id, uint64_t time
+            ,const std::string& thread_name)
+            :m_file(file)
+            ,m_line(line)
+            ,m_elapse(elapse)
+            ,m_threadId(thread_id)
+            ,m_fiberId(fiber_id)
+            ,m_time(time)
+            ,m_threadName(thread_name)
+            ,m_logger(logger)
+            ,m_level(level) {
+    }
+
+	Logger::Logger(const std::string& name) :m_name(name),m_level(LogLevel::DEBUG){
+        //m_formatter.reset(new LogFormatter("%d [%p] <%f:%l>%m %n"));
+        m_formatter.reset(new LogFormatter("%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"));
 	}
 	void Logger::addAppender(LogAppender::ptr appender) {
+	    if(!appender->getFormatter()){
+	        appender->setFormatter(m_formatter);
+	    }
 		m_appenders.push_back(appender);
 	}
 	void Logger::delAppender(LogAppender::ptr appender) {
@@ -204,10 +233,12 @@ namespace autoli {
 //            {
 //                i->log(level,event);
 //            }
+
             for(auto& i:m_appenders)
             {
                 i->log(self,level,event);
             }
+
         }
     }
 
@@ -247,6 +278,15 @@ namespace autoli {
             m_filestream<<m_formatter->format(logger,level,event);
             }
     }
+    void LogAppender::setFormatter(LogFormatter::ptr val) {
+        //MutexType::Lock lock(m_mutex);
+        m_formatter = val;
+        if(m_formatter) {
+            m_hasFormatter = true;
+        } else {
+            m_hasFormatter = false;
+        }
+    }
 
 //    std::string FileLogAppender::toYamlString() {
 //        MutexType::Lock lock(m_mutex);
@@ -278,6 +318,7 @@ namespace autoli {
         if(level >= m_level) {
 //            MutexType::Lock lock(m_mutex);
             m_formatter->format(std::cout, logger, level, event);
+
         }
     }
 
@@ -311,9 +352,11 @@ namespace autoli {
 	}
 
 	std::ostream& LogFormatter::format(std::ostream& ofs, std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) {
-		for (auto& i : m_items) {
+
+        for (auto& i : m_items) {
 			i->format(ofs, logger, level, event);
 		}
+
 		return ofs;
 	}
 
@@ -425,9 +468,8 @@ namespace autoli {
 					m_items.push_back(it->second(std::get<1>(i)));
 				}
 			}
-
-			//std::cout << "(" << std::get<0>(i) << ") - (" << std::get<1>(i) << ") - (" << std::get<2>(i) << ")" << std::endl;
+			std::cout << "(" << std::get<0>(i) << ") - (" << std::get<1>(i) << ") - (" << std::get<2>(i) << ")" << std::endl;
 		}
-		//std::cout << m_items.size() << std::endl;
+		std::cout << m_items.size() << std::endl;
 	}
 }

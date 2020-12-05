@@ -6,20 +6,22 @@
 #include "../autoli/log.h"
 
 int main(int argc, char** argv) {
-//    autoli::Logger::ptr logger(new autoli::Logger);
-//    logger->addAppender(autoli::LogAppender::ptr(new autoli::StdoutLogAppender));
-//
+    autoli::Logger::ptr logger(new autoli::Logger);
+
+    logger->addAppender(autoli::LogAppender::ptr(new autoli::StdoutLogAppender));
+
+    //autoli::LogEvent::ptr event(new autoli::LogEvent( __FILE__,__LINE__,0,1,2,time(0)));
+    autoli::LogEvent::ptr event(new autoli::LogEvent(logger,autoli::LogLevel::DEBUG,__FILE__,__LINE__,0,1,1,time(0),"first"));
 //    autoli::FileLogAppender::ptr file_appender(new autoli::FileLogAppender("./log.txt"));
 //    autoli::LogFormatter::ptr fmt(new autoli::LogFormatter("%d%T%p%T%m%n"));
 //    file_appender->setFormatter(fmt);
 //    file_appender->setLevel(autoli::LogLevel::ERROR);
 //
 //    logger->addAppender(file_appender);
-
-    //sylar::LogEvent::ptr event(new sylar::LogEvent(__FILE__, __LINE__, 0, sylar::GetThreadId(), sylar::GetFiberId(), time(0)));
-    //event->getSS() << "hello sylar log";
-    //logger->log(sylar::LogLevel::DEBUG, event);
-    std::cout << "hello autoli log" << std::endl;
+//
+//    autoli::LogEvent::ptr  levent(new autoli::LogEvent(__FILE__, __LINE__, 0, 1, 2, time(0)));
+    event->getSS() << "hello autoli log";
+    logger->log(autoli::LogLevel::DEBUG, event);
 //
 //    SYLAR_LOG_INFO(logger) << "test macro";
 //    SYLAR_LOG_ERROR(logger) << "test macro error";
