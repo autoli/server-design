@@ -10,6 +10,83 @@
 #include <iostream>
 #include <vector>
 
+/**
+ * @brief 使用流式方式将日志级别level的日志写入到logger
+ */
+#define AUTOLI_LOG_LEVEL(logger, level) \
+    if(logger->getLevel() <= level) \
+        autoli::LogEventWrap(autoli::LogEvent::ptr(new autoli::LogEvent(logger, level, \
+                        __FILE__, __LINE__, 0, autoli::GetThreadId(),\
+                autoli::GetFiberId(), time(0),"first" /*autoli::Thread::GetName()*/))).getSS()
+
+/**
+ * @brief 使用流式方式将日志级别debug的日志写入到logger
+ */
+#define AUTOLI_LOG_DEBUG(logger) AUTOLI_LOG_LEVEL(logger, autoli::LogLevel::DEBUG)
+
+/**
+ * @brief 使用流式方式将日志级别info的日志写入到logger
+ */
+#define AUTOLI_LOG_INFO(logger) AUTOLI_LOG_LEVEL(logger, autoli::LogLevel::INFO)
+
+/**
+ * @brief 使用流式方式将日志级别warn的日志写入到logger
+ */
+#define AUTOLI_LOG_WARN(logger) AUTOLI_LOG_LEVEL(logger, autoli::LogLevel::WARN)
+
+/**
+ * @brief 使用流式方式将日志级别error的日志写入到logger
+ */
+#define AUTOLI_LOG_ERROR(logger) AUTOLI_LOG_LEVEL(logger, autoli::LogLevel::ERROR)
+
+/**
+ * @brief 使用流式方式将日志级别fatal的日志写入到logger
+ */
+#define AUTOLI_LOG_FATAL(logger) AUTOLI_LOG_LEVEL(logger, autoli::LogLevel::FATAL)
+
+/**
+ * @brief 使用格式化方式将日志级别level的日志写入到logger
+ */
+#define AUTOLI_LOG_FMT_LEVEL(logger, level, fmt, ...) \
+    if(logger->getLevel() <= level) \
+        autoli::LogEventWrap(autoli::LogEvent::ptr(new autoli::LogEvent(logger, level, \
+                        __FILE__, __LINE__, 0, autoli::GetThreadId(),\
+                autoli::GetFiberId(), time(0), autoli::Thread::GetName()))).getEvent()->format(fmt, __VA_ARGS__)
+
+/**
+ * @brief 使用格式化方式将日志级别debug的日志写入到logger
+ */
+#define AUTOLI_LOG_FMT_DEBUG(logger, fmt, ...) AUTOLI_LOG_FMT_LEVEL(logger, autoli::LogLevel::DEBUG, fmt, __VA_ARGS__)
+
+/**
+ * @brief 使用格式化方式将日志级别info的日志写入到logger
+ */
+#define AUTOLI_LOG_FMT_INFO(logger, fmt, ...)  AUTOLI_LOG_FMT_LEVEL(logger, autoli::LogLevel::INFO, fmt, __VA_ARGS__)
+
+/**
+ * @brief 使用格式化方式将日志级别warn的日志写入到logger
+ */
+#define AUTOLI_LOG_FMT_WARN(logger, fmt, ...)  AUTOLI_LOG_FMT_LEVEL(logger, autoli::LogLevel::WARN, fmt, __VA_ARGS__)
+
+/**
+ * @brief 使用格式化方式将日志级别error的日志写入到logger
+ */
+#define AUTOLI_LOG_FMT_ERROR(logger, fmt, ...) AUTOLI_LOG_FMT_LEVEL(logger, autoli::LogLevel::ERROR, fmt, __VA_ARGS__)
+
+/**
+ * @brief 使用格式化方式将日志级别fatal的日志写入到logger
+ */
+#define AUTOLI_LOG_FMT_FATAL(logger, fmt, ...) AUTOLI_LOG_FMT_LEVEL(logger, autoli::LogLevel::FATAL, fmt, __VA_ARGS__)
+
+/**
+ * @brief 获取主日志器
+ */
+#define AUTOLI_LOG_ROOT() autoli::LoggerMgr::GetInstance()->getRoot()
+
+/**
+ * @brief 获取name的日志器
+ */
+#define AUTOLI_LOG_NAME(name) autoli::LoggerMgr::GetInstance()->getLogger(name)
 
 namespace autoli {
     class Logger;
@@ -129,12 +206,12 @@ namespace autoli {
 //        /**
 //            * @brief 格式化写入日志内容
 //            */
-//        void format(const char *fmt, ...);
+        void format(const char *fmt, ...);
 //
 //        /**
 //            * @brief 格式化写入日志内容
 //            */
-//        void format(const char *fmt, va_list al);
+        void format(const char *fmt, va_list al);
 
     private:
         /// 文件名
@@ -160,6 +237,38 @@ namespace autoli {
         std::string  m_content;
     };
 
+/**
+ * @brief 日志事件包装器
+ */
+class LogEventWrap {
+public:
+
+    /**
+     * @brief 构造函数
+     * @param[in] e 日志事件
+     */
+    LogEventWrap(LogEvent::ptr e);
+
+    /**
+     * @brief 析构函数
+     */
+    ~LogEventWrap();
+
+    /**
+     * @brief 获取日志事件
+     */
+    LogEvent::ptr getEvent() const { return m_event;}
+
+    /**
+     * @brief 获取日志内容流
+     */
+    std::stringstream& getSS();
+private:
+    /**
+     * @brief 日志事件
+     */
+    LogEvent::ptr m_event;
+};
 
 
 //日志格式器

@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/log.cc" "/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/autoli.dir/autoli/log.cc.o"
+  "/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util.cc" "/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/autoli.dir/autoli/util.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

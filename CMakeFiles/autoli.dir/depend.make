@@ -4,3 +4,6 @@
 CMakeFiles/autoli.dir/autoli/log.cc.o: autoli/log.cc
 CMakeFiles/autoli.dir/autoli/log.cc.o: autoli/log.h
 
+CMakeFiles/autoli.dir/autoli/util.cc.o: autoli/util.cc
+CMakeFiles/autoli.dir/autoli/util.cc.o: autoli/util.h
+

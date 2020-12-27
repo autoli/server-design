@@ -49,6 +49,18 @@ namespace autoli {
 #undef XX
 	}
 
+	LogEventWrap::LogEventWrap(LogEvent::ptr e)
+    :m_event(e) {
+	}
+
+	LogEventWrap::~LogEventWrap() {
+    	m_event->getLogger()->log(m_event->getLevel(), m_event);
+	}
+
+	std::stringstream& LogEventWrap::getSS() {
+    return m_event->getSS();
+	}
+
 	class MessageFormatItem : public LogFormatter::FormatItem {
 	public:
 		MessageFormatItem(const std::string& str = "") {}
@@ -468,8 +480,8 @@ namespace autoli {
 					m_items.push_back(it->second(std::get<1>(i)));
 				}
 			}
-			std::cout << "(" << std::get<0>(i) << ") - (" << std::get<1>(i) << ") - (" << std::get<2>(i) << ")" << std::endl;
+			//std::cout << "(" << std::get<0>(i) << ") - (" << std::get<1>(i) << ") - (" << std::get<2>(i) << ")" << std::endl;
 		}
-		std::cout << m_items.size() << std::endl;
+		//std::cout << m_items.size() << std::endl;
 	}
 }

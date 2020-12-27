@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/test.dir/autoli/util.cc.o"
   "CMakeFiles/test.dir/tests/test.cc.o"
   "bin/test"
   "bin/test.pdb"
