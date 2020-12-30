@@ -4,8 +4,9 @@
 #include <functional>
 #include <time.h>
 #include <string.h>
+#include <stdarg.h>
 //#include "config.h"
-//#include "util.h"
+#include "util.h"
 //#include "macro.h"
 //#include "env.h"
 
@@ -55,6 +56,22 @@ namespace autoli {
 
 	LogEventWrap::~LogEventWrap() {
     	m_event->getLogger()->log(m_event->getLevel(), m_event);
+	}
+
+	void LogEvent::format(const char* fmt, ...) {
+    va_list al;
+    va_start(al, fmt);
+    format(fmt, al);
+    va_end(al);
+	}
+
+void LogEvent::format(const char* fmt, va_list al) {
+    char* buf = nullptr;
+    int len = vasprintf(&buf, fmt, al);
+    if(len != -1) {
+        m_ss << std::string(buf, len);
+        free(buf);
+    }
 	}
 
 	std::stringstream& LogEventWrap::getSS() {
@@ -272,7 +289,7 @@ namespace autoli {
 
     FileLogAppender::FileLogAppender(const std::string& filename)
             :m_filename(filename) {
-//        reopen();
+        reopen();
     }
 
     void FileLogAppender::log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) {
@@ -323,7 +340,7 @@ namespace autoli {
         }
         m_filestream.open(m_filename);
         return !m_filestream;
-//        return FSUtil::OpenForWrite(m_filestream, m_filename, std::ios::app);
+        //return FSUtil::OpenForWrite(m_filestream, m_filename, std::ios::app);
     }
 
     void StdoutLogAppender::log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) {
@@ -483,5 +500,30 @@ namespace autoli {
 			//std::cout << "(" << std::get<0>(i) << ") - (" << std::get<1>(i) << ") - (" << std::get<2>(i) << ")" << std::endl;
 		}
 		//std::cout << m_items.size() << std::endl;
+	}
+	LoggerManager::LoggerManager() {
+    m_root.reset(new Logger);
+    m_root->addAppender(LogAppender::ptr(new StdoutLogAppender));
+
+    //m_loggers[m_root->m_name] = m_root;
+
+    init();
+	}
+
+	void LoggerManager::init() {
+	}
+
+Logger::ptr LoggerManager::getLogger(const std::string& name) {
+    //MutexType::Lock lock(m_mutex);
+    auto it = m_loggers.find(name);
+	return it==m_loggers.end()?m_root:it->second;
+    // if(it != m_loggers.end()) {
+    //     return it->second;
+    // }
+
+    // Logger::ptr logger(new Logger(name));
+    // logger->m_root = m_root;
+    // m_loggers[name] = logger;
+    // return logger;
 	}
 }

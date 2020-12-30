@@ -9,7 +9,9 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
-
+#include <map>
+#include "singleton.h"
+#include "util.h"
 /**
  * @brief 使用流式方式将日志级别level的日志写入到logger
  */
@@ -51,7 +53,7 @@
     if(logger->getLevel() <= level) \
         autoli::LogEventWrap(autoli::LogEvent::ptr(new autoli::LogEvent(logger, level, \
                         __FILE__, __LINE__, 0, autoli::GetThreadId(),\
-                autoli::GetFiberId(), time(0), autoli::Thread::GetName()))).getEvent()->format(fmt, __VA_ARGS__)
+                autoli::GetFiberId(), time(0), "first"/*autoli::Thread::GetName()*/))).getEvent()->format(fmt, __VA_ARGS__)
 
 /**
  * @brief 使用格式化方式将日志级别debug的日志写入到logger
@@ -568,5 +570,50 @@ private:
         /// 上次重新打开时间
         uint64_t m_lastTime = 0;
     };
+
+    /**
+ * @brief 日志器管理类
+ */
+class LoggerManager {
+public:
+    //typedef Spinlock MutexType;
+    /**
+     * @brief 构造函数
+     */
+    LoggerManager();
+
+    /**
+     * @brief 获取日志器
+     * @param[in] name 日志器名称
+     */
+    Logger::ptr getLogger(const std::string& name);
+
+    /**
+     * @brief 初始化
+     */
+    void init();
+
+    /**
+     * @brief 返回主日志器
+     */
+    Logger::ptr getRoot() const { return m_root;}
+
+    /**
+     * @brief 将所有的日志器配置转成YAML String
+     */
+    std::string toYamlString();
+private:
+    /// Mutex
+    //MutexType m_mutex;
+    /// 日志器容器
+    std::map<std::string, Logger::ptr> m_loggers;
+    /// 主日志器
+    Logger::ptr m_root;
+};
+
+/// 日志器管理类单例模式
+typedef autoli::Singleton<LoggerManager> LoggerMgr;
+
+    
 }
 #endif

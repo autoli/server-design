@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/autoli.dir/autoli/config.cc.o"
   "CMakeFiles/autoli.dir/autoli/log.cc.o"
   "CMakeFiles/autoli.dir/autoli/util.cc.o"
   "lib/libautoli.pdb"

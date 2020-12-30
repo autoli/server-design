@@ -215,6 +215,9 @@ Project_BINARY_DIR:STATIC=/media/llaron/7E96ADB696AD6F79/代码/高性能服务�
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server
 
+//Path to a library.
+YAMLCPP:FILEPATH=/usr/local/lib/libyaml-cpp.so
+
 //Value Computed by CMake
 autoli-server_BINARY_DIR:STATIC=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server
 

@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_config
+
+# Build rule for target.
+test_config: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_config
+.PHONY : test_config
+
+# fast build rule for target.
+test_config/fast:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
+.PHONY : test_config/fast
+
+#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -138,6 +151,33 @@ autoli: cmake_check_build_system
 autoli/fast:
 	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/build
 .PHONY : autoli/fast
+
+autoli/config.o: autoli/config.cc.o
+
+.PHONY : autoli/config.o
+
+# target to build an object file
+autoli/config.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/config.cc.o
+.PHONY : autoli/config.cc.o
+
+autoli/config.i: autoli/config.cc.i
+
+.PHONY : autoli/config.i
+
+# target to preprocess a source file
+autoli/config.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/config.cc.i
+.PHONY : autoli/config.cc.i
+
+autoli/config.s: autoli/config.cc.s
+
+.PHONY : autoli/config.s
+
+# target to generate assembly for a file
+autoli/config.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/config.cc.s
+.PHONY : autoli/config.cc.s
 
 autoli/log.o: autoli/log.cc.o
 
@@ -172,7 +212,6 @@ autoli/util.o: autoli/util.cc.o
 
 # target to build an object file
 autoli/util.cc.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/autoli/util.cc.o
 	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/util.cc.o
 .PHONY : autoli/util.cc.o
 
@@ -182,7 +221,6 @@ autoli/util.i: autoli/util.cc.i
 
 # target to preprocess a source file
 autoli/util.cc.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/autoli/util.cc.i
 	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/util.cc.i
 .PHONY : autoli/util.cc.i
 
@@ -192,7 +230,6 @@ autoli/util.s: autoli/util.cc.s
 
 # target to generate assembly for a file
 autoli/util.cc.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/autoli/util.cc.s
 	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/util.cc.s
 .PHONY : autoli/util.cc.s
 
@@ -223,6 +260,33 @@ tests/test.cc.s:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cc.s
 .PHONY : tests/test.cc.s
 
+tests/test_config.o: tests/test_config.cc.o
+
+.PHONY : tests/test_config.o
+
+# target to build an object file
+tests/test_config.cc.o:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.o
+.PHONY : tests/test_config.cc.o
+
+tests/test_config.i: tests/test_config.cc.i
+
+.PHONY : tests/test_config.i
+
+# target to preprocess a source file
+tests/test_config.cc.i:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.i
+.PHONY : tests/test_config.cc.i
+
+tests/test_config.s: tests/test_config.cc.s
+
+.PHONY : tests/test_config.s
+
+# target to generate assembly for a file
+tests/test_config.cc.s:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.s
+.PHONY : tests/test_config.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -230,9 +294,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test_config"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... autoli"
+	@echo "... autoli/config.o"
+	@echo "... autoli/config.i"
+	@echo "... autoli/config.s"
 	@echo "... autoli/log.o"
 	@echo "... autoli/log.i"
 	@echo "... autoli/log.s"
@@ -242,6 +310,9 @@ help:
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
+	@echo "... tests/test_config.o"
+	@echo "... tests/test_config.i"
+	@echo "... tests/test_config.s"
 .PHONY : help
 
 

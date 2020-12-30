@@ -5,6 +5,7 @@
 #ifndef __AUTOLI_UTIL_H__
 #define __AUTOLI_UTIL_H__
 
+#include <cxxabi.h>
 #include <pthread.h>
 #include <unistd.h>
 #include <sys/types.h>
@@ -24,5 +25,10 @@ namespace autoli{
  */
     uint32_t GetFiberId();//uint32_t需要用stdint.h
 
+    template<class T>
+    const char* TypeToName() {
+        static const char* s_name = abi::__cxa_demangle(typeid(T).name(), nullptr, nullptr, nullptr);
+        return s_name;
+    }
 }
 #endif

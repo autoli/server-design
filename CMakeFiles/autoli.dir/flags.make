@@ -6,5 +6,5 @@ CXX_FLAGS =  -rdynamic -O3 -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unus
 
 CXX_DEFINES = -Dautoli_EXPORTS
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/. 
 
