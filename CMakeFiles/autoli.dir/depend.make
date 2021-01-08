@@ -3,15 +3,93 @@
 
 CMakeFiles/autoli.dir/autoli/config.cc.o: autoli/config.cc
 CMakeFiles/autoli.dir/autoli/config.cc.o: autoli/config.h
+CMakeFiles/autoli.dir/autoli/config.cc.o: autoli/fiber.h
 CMakeFiles/autoli.dir/autoli/config.cc.o: autoli/log.h
+CMakeFiles/autoli.dir/autoli/config.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/config.cc.o: autoli/noncopyable.h
 CMakeFiles/autoli.dir/autoli/config.cc.o: autoli/singleton.h
+CMakeFiles/autoli.dir/autoli/config.cc.o: autoli/thread.h
 CMakeFiles/autoli.dir/autoli/config.cc.o: autoli/util.h
 
+CMakeFiles/autoli.dir/autoli/fiber.cc.o: autoli/config.h
+CMakeFiles/autoli.dir/autoli/fiber.cc.o: autoli/fiber.cc
+CMakeFiles/autoli.dir/autoli/fiber.cc.o: autoli/fiber.h
+CMakeFiles/autoli.dir/autoli/fiber.cc.o: autoli/log.h
+CMakeFiles/autoli.dir/autoli/fiber.cc.o: autoli/macro.h
+CMakeFiles/autoli.dir/autoli/fiber.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/fiber.cc.o: autoli/noncopyable.h
+CMakeFiles/autoli.dir/autoli/fiber.cc.o: autoli/scheduler.h
+CMakeFiles/autoli.dir/autoli/fiber.cc.o: autoli/singleton.h
+CMakeFiles/autoli.dir/autoli/fiber.cc.o: autoli/thread.h
+CMakeFiles/autoli.dir/autoli/fiber.cc.o: autoli/util.h
+
+CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/fiber.h
+CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/iomanager.cc
+CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/iomanager.h
+CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/log.h
+CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/macro.h
+CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/noncopyable.h
+CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/scheduler.h
+CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/singleton.h
+CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/thread.h
+CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/timer.h
+CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/util.h
+
+CMakeFiles/autoli.dir/autoli/log.cc.o: autoli/config.h
+CMakeFiles/autoli.dir/autoli/log.cc.o: autoli/fiber.h
 CMakeFiles/autoli.dir/autoli/log.cc.o: autoli/log.cc
 CMakeFiles/autoli.dir/autoli/log.cc.o: autoli/log.h
+CMakeFiles/autoli.dir/autoli/log.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/log.cc.o: autoli/noncopyable.h
 CMakeFiles/autoli.dir/autoli/log.cc.o: autoli/singleton.h
+CMakeFiles/autoli.dir/autoli/log.cc.o: autoli/thread.h
 CMakeFiles/autoli.dir/autoli/log.cc.o: autoli/util.h
 
+CMakeFiles/autoli.dir/autoli/mutex.cc.o: autoli/fiber.h
+CMakeFiles/autoli.dir/autoli/mutex.cc.o: autoli/log.h
+CMakeFiles/autoli.dir/autoli/mutex.cc.o: autoli/macro.h
+CMakeFiles/autoli.dir/autoli/mutex.cc.o: autoli/mutex.cc
+CMakeFiles/autoli.dir/autoli/mutex.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/mutex.cc.o: autoli/noncopyable.h
+CMakeFiles/autoli.dir/autoli/mutex.cc.o: autoli/singleton.h
+CMakeFiles/autoli.dir/autoli/mutex.cc.o: autoli/thread.h
+CMakeFiles/autoli.dir/autoli/mutex.cc.o: autoli/util.h
+
+CMakeFiles/autoli.dir/autoli/scheduler.cc.o: autoli/fiber.h
+CMakeFiles/autoli.dir/autoli/scheduler.cc.o: autoli/log.h
+CMakeFiles/autoli.dir/autoli/scheduler.cc.o: autoli/macro.h
+CMakeFiles/autoli.dir/autoli/scheduler.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/scheduler.cc.o: autoli/noncopyable.h
+CMakeFiles/autoli.dir/autoli/scheduler.cc.o: autoli/scheduler.cc
+CMakeFiles/autoli.dir/autoli/scheduler.cc.o: autoli/scheduler.h
+CMakeFiles/autoli.dir/autoli/scheduler.cc.o: autoli/singleton.h
+CMakeFiles/autoli.dir/autoli/scheduler.cc.o: autoli/thread.h
+CMakeFiles/autoli.dir/autoli/scheduler.cc.o: autoli/util.h
+
+CMakeFiles/autoli.dir/autoli/thread.cc.o: autoli/fiber.h
+CMakeFiles/autoli.dir/autoli/thread.cc.o: autoli/log.h
+CMakeFiles/autoli.dir/autoli/thread.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/thread.cc.o: autoli/noncopyable.h
+CMakeFiles/autoli.dir/autoli/thread.cc.o: autoli/singleton.h
+CMakeFiles/autoli.dir/autoli/thread.cc.o: autoli/thread.cc
+CMakeFiles/autoli.dir/autoli/thread.cc.o: autoli/thread.h
+CMakeFiles/autoli.dir/autoli/thread.cc.o: autoli/util.h
+
+CMakeFiles/autoli.dir/autoli/timer.cc.o: autoli/fiber.h
+CMakeFiles/autoli.dir/autoli/timer.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/timer.cc.o: autoli/noncopyable.h
+CMakeFiles/autoli.dir/autoli/timer.cc.o: autoli/thread.h
+CMakeFiles/autoli.dir/autoli/timer.cc.o: autoli/timer.cc
+CMakeFiles/autoli.dir/autoli/timer.cc.o: autoli/timer.h
+CMakeFiles/autoli.dir/autoli/timer.cc.o: autoli/util.h
+
+CMakeFiles/autoli.dir/autoli/util.cc.o: autoli/fiber.h
+CMakeFiles/autoli.dir/autoli/util.cc.o: autoli/log.h
+CMakeFiles/autoli.dir/autoli/util.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/util.cc.o: autoli/noncopyable.h
+CMakeFiles/autoli.dir/autoli/util.cc.o: autoli/singleton.h
+CMakeFiles/autoli.dir/autoli/util.cc.o: autoli/thread.h
 CMakeFiles/autoli.dir/autoli/util.cc.o: autoli/util.cc
 CMakeFiles/autoli.dir/autoli/util.cc.o: autoli/util.h
 

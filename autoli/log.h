@@ -12,6 +12,7 @@
 #include <map>
 #include "singleton.h"
 #include "util.h"
+#include "thread.h"
 /**
  * @brief 使用流式方式将日志级别level的日志写入到logger
  */
@@ -19,7 +20,7 @@
     if(logger->getLevel() <= level) \
         autoli::LogEventWrap(autoli::LogEvent::ptr(new autoli::LogEvent(logger, level, \
                         __FILE__, __LINE__, 0, autoli::GetThreadId(),\
-                autoli::GetFiberId(), time(0),"first" /*autoli::Thread::GetName()*/))).getSS()
+                autoli::GetFiberId(), time(0),autoli::Thread::GetName()))).getSS()
 
 /**
  * @brief 使用流式方式将日志级别debug的日志写入到logger
@@ -53,7 +54,7 @@
     if(logger->getLevel() <= level) \
         autoli::LogEventWrap(autoli::LogEvent::ptr(new autoli::LogEvent(logger, level, \
                         __FILE__, __LINE__, 0, autoli::GetThreadId(),\
-                autoli::GetFiberId(), time(0), "first"/*autoli::Thread::GetName()*/))).getEvent()->format(fmt, __VA_ARGS__)
+                autoli::GetFiberId(), time(0), autoli::Thread::GetName()))).getEvent()->format(fmt, __VA_ARGS__)
 
 /**
  * @brief 使用格式化方式将日志级别debug的日志写入到logger
@@ -94,6 +95,7 @@ namespace autoli {
     class Logger;
     class LogEvent;
     class LogAppender;
+    class LoggerManager;
 /**
 	* @brief 日志级别
 	*/
@@ -364,7 +366,7 @@ private:
 
     public:
         typedef std::shared_ptr <LogAppender> ptr;
-//        typedef Spinlock MutexType;
+        typedef Spinlock MutexType;
 //
 //        /**
 //         * @brief 析构函数
@@ -378,11 +380,11 @@ private:
 //         * @param[in] event 日志事件
 //         */
         virtual void log(std::shared_ptr <Logger> logger, LogLevel::Level level, LogEvent::ptr event) = 0;
-//
-//        /**
-//         * @brief 将日志输出目标的配置转成YAML String
-//         */
-//        virtual std::string toYamlString() = 0;
+
+       /**
+        * @brief 将日志输出目标的配置转成YAML String
+        */
+       virtual std::string toYamlString() = 0;
 
         /**
          * @brief 更改日志格式器
@@ -392,7 +394,7 @@ private:
         /**
          * @brief 获取日志格式器
          */
-        LogFormatter::ptr getFormatter() const{return m_formatter;}
+        LogFormatter::ptr getFormatter();
 
         /**
          * @brief 获取日志级别
@@ -409,9 +411,9 @@ private:
         LogLevel::Level m_level = LogLevel::DEBUG;
         /// 是否有自己的日志格式器
         bool m_hasFormatter = false;
-//        /// Mutex
-//        MutexType m_mutex;
-//        /// 日志格式器
+        /// Mutex
+        MutexType m_mutex;
+        /// 日志格式器
         LogFormatter::ptr m_formatter;
     };
 
@@ -421,10 +423,11 @@ private:
 
     class Logger : public std::enable_shared_from_this<Logger> {
 
-//        friend class LoggerManager;
+        friend class LoggerManager;
 
     public:
         typedef std::shared_ptr <Logger> ptr;
+        typedef Spinlock MutexType;
         /**
          * @brief 构造函数
          * @param[in] name 日志器名称
@@ -498,41 +501,41 @@ private:
          * @brief 返回日志名称
          */
         const std::string &getName() const { return m_name; }
-//
-//        /**
-//         * @brief 设置日志格式器
-//         */
-//        void setFormatter(LogFormatter::ptr val);
-//
-//        /**
-//         * @brief 设置日志格式模板
-//         */
-//        void setFormatter(const std::string &val);
-//
-//        /**
-//         * @brief 获取日志格式器
-//         */
-//        LogFormatter::ptr getFormatter();
-//
-//        /**
-//         * @brief 将日志器的配置转成YAML String
-//         */
-//        std::string toYamlString();
-//
+
+       /**
+        * @brief 设置日志格式器
+        */
+       void setFormatter(LogFormatter::ptr val);
+
+       /**
+        * @brief 设置日志格式模板
+        */
+       void setFormatter(const std::string &val);
+
+       /**
+        * @brief 获取日志格式器
+        */
+       LogFormatter::ptr getFormatter();
+
+       /**
+        * @brief 将日志器的配置转成YAML String
+        */
+       std::string toYamlString();
+
     private:
         /// 日志名称
         std::string m_name;
         /// 日志级别
         LogLevel::Level m_level;
-//        /// Mutex
-//        MutexType m_mutex;
+        /// Mutex
+        MutexType m_mutex;
         /// 日志目标集合
         std::list <LogAppender::ptr> m_appenders;
-//        /// 日志格式器
+        /// 日志格式器
         LogFormatter::ptr m_formatter;
         /// 主日志器
         Logger::ptr m_root;
-    };
+};
 
     class StdoutLogAppender : public LogAppender {
     public:
@@ -540,7 +543,7 @@ private:
 
         void log(Logger::ptr logger, LogLevel::Level level, LogEvent::ptr event) override;
 
-//        std::string toYamlString() override;
+       std::string toYamlString() override;
     };
 
 /**
@@ -553,8 +556,8 @@ private:
         FileLogAppender(const std::string &filename);
 
         void log(Logger::ptr logger, LogLevel::Level level, LogEvent::ptr event) override;
-//
-//        std::string toYamlString() override;
+
+        std::string toYamlString() override;
 
         /**
          * @brief 重新打开日志文件
@@ -576,7 +579,7 @@ private:
  */
 class LoggerManager {
 public:
-    //typedef Spinlock MutexType;
+    typedef Spinlock MutexType;
     /**
      * @brief 构造函数
      */
@@ -604,7 +607,7 @@ public:
     std::string toYamlString();
 private:
     /// Mutex
-    //MutexType m_mutex;
+    MutexType m_mutex;
     /// 日志器容器
     std::map<std::string, Logger::ptr> m_loggers;
     /// 主日志器

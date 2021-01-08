@@ -1,5 +1,10 @@
+/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_iomanager.dir
+/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_fiber.dir
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/rebuild_cache.dir
+/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_util.dir
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_config.dir
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/edit_cache.dir
+/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_thread.dir
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test.dir
+/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_scheduler.dir
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/autoli.dir

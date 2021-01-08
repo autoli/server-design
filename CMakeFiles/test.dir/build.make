@@ -63,15 +63,15 @@ include CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/tests/test.cc.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/tests/test.cc.o: tests/test.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/tests/test.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/tests/test.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/tests/test.cc
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"tests/test.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/tests/test.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/tests/test.cc
 
 CMakeFiles/test.dir/tests/test.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/tests/test.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/tests/test.cc > CMakeFiles/test.dir/tests/test.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"tests/test.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/tests/test.cc > CMakeFiles/test.dir/tests/test.cc.i
 
 CMakeFiles/test.dir/tests/test.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/tests/test.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/tests/test.cc -o CMakeFiles/test.dir/tests/test.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"tests/test.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/tests/test.cc -o CMakeFiles/test.dir/tests/test.cc.s
 
 # Object files for target test
 test_OBJECTS = \

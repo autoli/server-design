@@ -1,0 +1,7 @@
+2021-01-07 20:11:11	136161	name_0	0	[INFO]	[root]	tests/test_thread.cc:11	name: name_0 this.name: name_0 id: 136161 this.id: 136161
+2021-01-07 20:11:11	136162	name_2	0	[INFO]	[root]	tests/test_thread.cc:11	name: name_2 this.name: name_2 id: 136162 this.id: 136162
+2021-01-07 20:11:11	136163	name_4	0	[INFO]	[root]	tests/test_thread.cc:11	name: name_4 this.name: name_4 id: 136163 this.id: 136163
+2021-01-07 20:11:11	136164	name_6	0	[INFO]	[root]	tests/test_thread.cc:11	name: name_6 this.name: name_6 id: 136164 this.id: 136164
+2021-01-07 20:11:11	136165	name_8	0	[INFO]	[root]	tests/test_thread.cc:11	name: name_8 this.name: name_8 id: 136165 this.id: 136165
+2021-01-07 20:11:12	136160	UNKNOW	0	[INFO]	[root]	tests/test_thread.cc:52	thread test end
+2021-01-07 20:11:12	136160	UNKNOW	0	[INFO]	[root]	tests/test_thread.cc:53	count=5000000

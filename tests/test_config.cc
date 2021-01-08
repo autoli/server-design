@@ -8,8 +8,8 @@
 autoli::ConfigVar<int>::ptr g_int_value_config =
     autoli::Config::Lookup("system.port", (int)8080, "system port");
 
-autoli::ConfigVar<float>::ptr g_int_valuex_config =
-    autoli::Config::Lookup("system.port", (float)8080, "system port");//类型不对会报错
+//autoli::ConfigVar<float>::ptr g_int_valuex_config =
+  //  autoli::Config::Lookup("system.port", (float)8080, "system port");//类型不对会报错
 
 autoli::ConfigVar<float>::ptr g_float_value_config =
     autoli::Config::Lookup("system.value", (float)10.2f, "system value");
@@ -58,7 +58,7 @@ void print_yaml(const YAML::Node& node, int level) {
 void test_yaml() {
     YAML::Node root = YAML::LoadFile("/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/bin/conf/log.yml");
     print_yaml(root, 0);
-    //SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << root.Scalar();
+    //AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT()) << root.Scalar();
 
     AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT()) << root["test"].IsDefined();
     AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT()) << root["logs"].IsDefined();
@@ -96,7 +96,7 @@ void test_config() {
     XX_M(g_str_int_map_value_config, str_int_map, before);
     XX_M(g_str_int_umap_value_config, str_int_umap, before);
 
-    YAML::Node root = YAML::LoadFile("/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/bin/conf/log.yml");
+    YAML::Node root = YAML::LoadFile("/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/bin/conf/test.yml");
     autoli::Config::LoadFromYaml(root);
     
     AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT()) << "after: " << g_int_value_config->getValue();
@@ -184,10 +184,15 @@ void test_class(){
         } \
         AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT()) <<  prefix << ": size=" << m.size(); \
     }
+    g_person->addListener([](const Person& old_value, const Person& new_value){
+        AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT()) << "old_value=" << old_value.toString()
+                << " new_value=" << new_value.toString();
+    });
+
     XX_PM(g_person_map, "class.map before");
     AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT())  << "before: " << g_person_vec_map->toString();
 
-    YAML::Node root = YAML::LoadFile("/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/bin/conf/log.yml");
+    YAML::Node root = YAML::LoadFile("/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/bin/conf/test.yml");
     autoli::Config::LoadFromYaml(root);
 
     AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT()) << "after: " << g_person->getValue().toString() << " - " << g_person->toString();
@@ -195,25 +200,41 @@ void test_class(){
     AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT())  << "after: " << g_person_vec_map->toString();
  
 }
+void test_log() {
+    static autoli::Logger::ptr system_log = AUTOLI_LOG_NAME("system");
+    AUTOLI_LOG_INFO(system_log) << "hello system" << std::endl;
+    std::cout << autoli::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+    YAML::Node root = YAML::LoadFile("/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/bin/conf/log.yml");
+    autoli::Config::LoadFromYaml(root);
+    std::cout << "=============" << std::endl;
+    std::cout << autoli::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+    std::cout << "=============" << std::endl;
+    std::cout << root << std::endl;
+    AUTOLI_LOG_INFO(system_log) << "hello system" << std::endl;
+
+    system_log->setFormatter("%d - %m%n");
+    AUTOLI_LOG_INFO(system_log) << "hello system" << std::endl;
+}
+
 int main(int argc, char** argv) {
     //AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT()) << g_int_value_config->getValue();
     //AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT()) << g_float_value_config->toString();
     //test_yaml();
     //test_config();
-    test_class();
-    //test_log();
+    //test_class();
+    test_log();
     // sylar::EnvMgr::GetInstance()->init(argc, argv);
     // test_loadconf();
     // std::cout << " ==== " << std::endl;
     // sleep(10);
     // test_loadconf();
     // return 0;
-    // sylar::Config::Visit([](sylar::ConfigVarBase::ptr var) {
-    //     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "name=" << var->getName()
-    //                 << " description=" << var->getDescription()
-    //                 << " typename=" << var->getTypeName()
-    //                 << " value=" << var->toString();
-    // });
+    autoli::Config::Visit([](autoli::ConfigVarBase::ptr var) {
+        AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT()) << "name=" << var->getName()
+                    << " description=" << var->getDescription()
+                    << " typename=" << var->getTypeName()
+                    << " value=" << var->toString();
+    });
 
     return 0;
 }

@@ -5,7 +5,7 @@ namespace autoli{
     static autoli::Logger::ptr g_logger = AUTOLI_LOG_NAME("system");
 
     ConfigVarBase::ptr Config::LookupBase(const std::string& name) {
-    //RWMutexType::ReadLock lock(GetMutex());
+    RWMutexType::ReadLock lock(GetMutex());
     auto it = GetDatas().find(name);
     return it == GetDatas().end() ? nullptr : it->second;
     }
@@ -56,4 +56,45 @@ namespace autoli{
         }
     }
 }
+
+// static std::map<std::string, uint64_t> s_file2modifytime;
+// static autoli::Mutex s_mutex;
+
+// void Config::LoadFromConfDir(const std::string& path, bool force) {
+//     std::string absoulte_path = sylar::EnvMgr::GetInstance()->getAbsolutePath(path);
+//     std::vector<std::string> files;
+//     FSUtil::ListAllFile(files, absoulte_path, ".yml");
+
+//     for(auto& i : files) {
+//         {
+//             struct stat st;
+//             lstat(i.c_str(), &st);
+//             sylar::Mutex::Lock lock(s_mutex);
+//             if(!force && s_file2modifytime[i] == (uint64_t)st.st_mtime) {
+//                 continue;
+//             }
+//             s_file2modifytime[i] = st.st_mtime;
+//         }
+//         try {
+//             YAML::Node root = YAML::LoadFile(i);
+//             LoadFromYaml(root);
+//             SYLAR_LOG_INFO(g_logger) << "LoadConfFile file="
+//                 << i << " ok";
+//         } catch (...) {
+//             SYLAR_LOG_ERROR(g_logger) << "LoadConfFile file="
+//                 << i << " failed";
+//         }
+//     }
+// }
+
+void Config::Visit(std::function<void(ConfigVarBase::ptr)> cb) {
+    RWMutexType::ReadLock lock(GetMutex());
+    ConfigVarMap& m = GetDatas();
+    for(auto it = m.begin();
+            it != m.end(); ++it) {
+        cb(it->second);
+    }
+
+}
+
 }
