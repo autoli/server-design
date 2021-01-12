@@ -8,11 +8,25 @@ CXX_DEFINES = -Dautoli_EXPORTS
 
 CXX_INCLUDES = -I/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/. 
 
+# Custom defines: CMakeFiles/autoli.dir/autoli/address.cc.o_DEFINES = __FILE__="autoli/address.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/bytearray.cc.o_DEFINES = __FILE__="autoli/bytearray.cc"
+
 # Custom defines: CMakeFiles/autoli.dir/autoli/log.cc.o_DEFINES = __FILE__="autoli/log.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/http/http.cc.o_DEFINES = __FILE__="autoli/http/http.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o_DEFINES = __FILE__="autoli/http/http_parser.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o_DEFINES = __FILE__="autoli/http/http11_parser.rl.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o_DEFINES = __FILE__="autoli/http/httpclient_parser.rl.cc"
 
 # Custom defines: CMakeFiles/autoli.dir/autoli/iomanager.cc.o_DEFINES = __FILE__="autoli/iomanager.cc"
 
 # Custom defines: CMakeFiles/autoli.dir/autoli/util.cc.o_DEFINES = __FILE__="autoli/util.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/hook.cc.o_DEFINES = __FILE__="autoli/hook.cc"
 
 # Custom defines: CMakeFiles/autoli.dir/autoli/config.cc.o_DEFINES = __FILE__="autoli/config.cc"
 
@@ -25,4 +39,10 @@ CXX_INCLUDES = -I/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli
 # Custom defines: CMakeFiles/autoli.dir/autoli/scheduler.cc.o_DEFINES = __FILE__="autoli/scheduler.cc"
 
 # Custom defines: CMakeFiles/autoli.dir/autoli/timer.cc.o_DEFINES = __FILE__="autoli/timer.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/fd_manager.cc.o_DEFINES = __FILE__="autoli/fd_manager.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/socket.cc.o_DEFINES = __FILE__="autoli/socket.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/tcp_server.cc.o_DEFINES = __FILE__="autoli/tcp_server.cc"
 

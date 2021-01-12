@@ -114,82 +114,56 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_iomanager
+# Target rules for targets named echo_server
 
 # Build rule for target.
-test_iomanager: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_iomanager
-.PHONY : test_iomanager
+echo_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 echo_server
+.PHONY : echo_server
 
 # fast build rule for target.
-test_iomanager/fast:
-	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
-.PHONY : test_iomanager/fast
+echo_server/fast:
+	$(MAKE) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/build
+.PHONY : echo_server/fast
 
 #=============================================================================
-# Target rules for targets named test_fiber
+# Target rules for targets named test_tcp_server
 
 # Build rule for target.
-test_fiber: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_fiber
-.PHONY : test_fiber
+test_tcp_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_tcp_server
+.PHONY : test_tcp_server
 
 # fast build rule for target.
-test_fiber/fast:
-	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
-.PHONY : test_fiber/fast
+test_tcp_server/fast:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/build
+.PHONY : test_tcp_server/fast
 
 #=============================================================================
-# Target rules for targets named test_util
+# Target rules for targets named test_http_parser
 
 # Build rule for target.
-test_util: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_util
-.PHONY : test_util
+test_http_parser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http_parser
+.PHONY : test_http_parser
 
 # fast build rule for target.
-test_util/fast:
-	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
-.PHONY : test_util/fast
+test_http_parser/fast:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/build
+.PHONY : test_http_parser/fast
 
 #=============================================================================
-# Target rules for targets named test_config
+# Target rules for targets named echo_server_udp
 
 # Build rule for target.
-test_config: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_config
-.PHONY : test_config
+echo_server_udp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 echo_server_udp
+.PHONY : echo_server_udp
 
 # fast build rule for target.
-test_config/fast:
-	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
-.PHONY : test_config/fast
-
-#=============================================================================
-# Target rules for targets named test_thread
-
-# Build rule for target.
-test_thread: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_thread
-.PHONY : test_thread
-
-# fast build rule for target.
-test_thread/fast:
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
-.PHONY : test_thread/fast
-
-#=============================================================================
-# Target rules for targets named test
-
-# Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
-
-# fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+echo_server_udp/fast:
+	$(MAKE) -f CMakeFiles/echo_server_udp.dir/build.make CMakeFiles/echo_server_udp.dir/build
+.PHONY : echo_server_udp/fast
 
 #=============================================================================
 # Target rules for targets named test_scheduler
@@ -205,6 +179,149 @@ test_scheduler/fast:
 .PHONY : test_scheduler/fast
 
 #=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
+
+#=============================================================================
+# Target rules for targets named test_thread
+
+# Build rule for target.
+test_thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
+
+# fast build rule for target.
+test_thread/fast:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
+
+#=============================================================================
+# Target rules for targets named test_config
+
+# Build rule for target.
+test_config: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_config
+.PHONY : test_config
+
+# fast build rule for target.
+test_config/fast:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
+.PHONY : test_config/fast
+
+#=============================================================================
+# Target rules for targets named test_bytearray
+
+# Build rule for target.
+test_bytearray: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_bytearray
+.PHONY : test_bytearray
+
+# fast build rule for target.
+test_bytearray/fast:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/build
+.PHONY : test_bytearray/fast
+
+#=============================================================================
+# Target rules for targets named test_util
+
+# Build rule for target.
+test_util: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_util
+.PHONY : test_util
+
+# fast build rule for target.
+test_util/fast:
+	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
+.PHONY : test_util/fast
+
+#=============================================================================
+# Target rules for targets named echo_udp_client
+
+# Build rule for target.
+echo_udp_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 echo_udp_client
+.PHONY : echo_udp_client
+
+# fast build rule for target.
+echo_udp_client/fast:
+	$(MAKE) -f CMakeFiles/echo_udp_client.dir/build.make CMakeFiles/echo_udp_client.dir/build
+.PHONY : echo_udp_client/fast
+
+#=============================================================================
+# Target rules for targets named test_fiber
+
+# Build rule for target.
+test_fiber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_fiber
+.PHONY : test_fiber
+
+# fast build rule for target.
+test_fiber/fast:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
+.PHONY : test_fiber/fast
+
+#=============================================================================
+# Target rules for targets named test_address
+
+# Build rule for target.
+test_address: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_address
+.PHONY : test_address
+
+# fast build rule for target.
+test_address/fast:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
+.PHONY : test_address/fast
+
+#=============================================================================
+# Target rules for targets named test_iomanager
+
+# Build rule for target.
+test_iomanager: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_iomanager
+.PHONY : test_iomanager
+
+# fast build rule for target.
+test_iomanager/fast:
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
+.PHONY : test_iomanager/fast
+
+#=============================================================================
+# Target rules for targets named test_hook
+
+# Build rule for target.
+test_hook: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_hook
+.PHONY : test_hook
+
+# fast build rule for target.
+test_hook/fast:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
+.PHONY : test_hook/fast
+
+#=============================================================================
+# Target rules for targets named test_socket
+
+# Build rule for target.
+test_socket: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_socket
+.PHONY : test_socket
+
+# fast build rule for target.
+test_socket/fast:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
+.PHONY : test_socket/fast
+
+#=============================================================================
 # Target rules for targets named autoli
 
 # Build rule for target.
@@ -216,6 +333,73 @@ autoli: cmake_check_build_system
 autoli/fast:
 	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/build
 .PHONY : autoli/fast
+
+#=============================================================================
+# Target rules for targets named test_http
+
+# Build rule for target.
+test_http: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http
+.PHONY : test_http
+
+# fast build rule for target.
+test_http/fast:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/build
+.PHONY : test_http/fast
+
+autoli/address.o: autoli/address.cc.o
+
+.PHONY : autoli/address.o
+
+# target to build an object file
+autoli/address.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/address.cc.o
+.PHONY : autoli/address.cc.o
+
+autoli/address.i: autoli/address.cc.i
+
+.PHONY : autoli/address.i
+
+# target to preprocess a source file
+autoli/address.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/address.cc.i
+.PHONY : autoli/address.cc.i
+
+autoli/address.s: autoli/address.cc.s
+
+.PHONY : autoli/address.s
+
+# target to generate assembly for a file
+autoli/address.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/address.cc.s
+.PHONY : autoli/address.cc.s
+
+autoli/bytearray.o: autoli/bytearray.cc.o
+
+.PHONY : autoli/bytearray.o
+
+# target to build an object file
+autoli/bytearray.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/bytearray.cc.o
+.PHONY : autoli/bytearray.cc.o
+
+autoli/bytearray.i: autoli/bytearray.cc.i
+
+.PHONY : autoli/bytearray.i
+
+# target to preprocess a source file
+autoli/bytearray.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/bytearray.cc.i
+.PHONY : autoli/bytearray.cc.i
+
+autoli/bytearray.s: autoli/bytearray.cc.s
+
+.PHONY : autoli/bytearray.s
+
+# target to generate assembly for a file
+autoli/bytearray.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/bytearray.cc.s
+.PHONY : autoli/bytearray.cc.s
 
 autoli/config.o: autoli/config.cc.o
 
@@ -244,6 +428,33 @@ autoli/config.cc.s:
 	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/config.cc.s
 .PHONY : autoli/config.cc.s
 
+autoli/fd_manager.o: autoli/fd_manager.cc.o
+
+.PHONY : autoli/fd_manager.o
+
+# target to build an object file
+autoli/fd_manager.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/fd_manager.cc.o
+.PHONY : autoli/fd_manager.cc.o
+
+autoli/fd_manager.i: autoli/fd_manager.cc.i
+
+.PHONY : autoli/fd_manager.i
+
+# target to preprocess a source file
+autoli/fd_manager.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/fd_manager.cc.i
+.PHONY : autoli/fd_manager.cc.i
+
+autoli/fd_manager.s: autoli/fd_manager.cc.s
+
+.PHONY : autoli/fd_manager.s
+
+# target to generate assembly for a file
+autoli/fd_manager.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/fd_manager.cc.s
+.PHONY : autoli/fd_manager.cc.s
+
 autoli/fiber.o: autoli/fiber.cc.o
 
 .PHONY : autoli/fiber.o
@@ -270,6 +481,141 @@ autoli/fiber.s: autoli/fiber.cc.s
 autoli/fiber.cc.s:
 	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/fiber.cc.s
 .PHONY : autoli/fiber.cc.s
+
+autoli/hook.o: autoli/hook.cc.o
+
+.PHONY : autoli/hook.o
+
+# target to build an object file
+autoli/hook.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/hook.cc.o
+.PHONY : autoli/hook.cc.o
+
+autoli/hook.i: autoli/hook.cc.i
+
+.PHONY : autoli/hook.i
+
+# target to preprocess a source file
+autoli/hook.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/hook.cc.i
+.PHONY : autoli/hook.cc.i
+
+autoli/hook.s: autoli/hook.cc.s
+
+.PHONY : autoli/hook.s
+
+# target to generate assembly for a file
+autoli/hook.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/hook.cc.s
+.PHONY : autoli/hook.cc.s
+
+autoli/http/http.o: autoli/http/http.cc.o
+
+.PHONY : autoli/http/http.o
+
+# target to build an object file
+autoli/http/http.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http.cc.o
+.PHONY : autoli/http/http.cc.o
+
+autoli/http/http.i: autoli/http/http.cc.i
+
+.PHONY : autoli/http/http.i
+
+# target to preprocess a source file
+autoli/http/http.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http.cc.i
+.PHONY : autoli/http/http.cc.i
+
+autoli/http/http.s: autoli/http/http.cc.s
+
+.PHONY : autoli/http/http.s
+
+# target to generate assembly for a file
+autoli/http/http.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http.cc.s
+.PHONY : autoli/http/http.cc.s
+
+autoli/http/http11_parser.rl.o: autoli/http/http11_parser.rl.cc.o
+
+.PHONY : autoli/http/http11_parser.rl.o
+
+# target to build an object file
+autoli/http/http11_parser.rl.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o
+.PHONY : autoli/http/http11_parser.rl.cc.o
+
+autoli/http/http11_parser.rl.i: autoli/http/http11_parser.rl.cc.i
+
+.PHONY : autoli/http/http11_parser.rl.i
+
+# target to preprocess a source file
+autoli/http/http11_parser.rl.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.i
+.PHONY : autoli/http/http11_parser.rl.cc.i
+
+autoli/http/http11_parser.rl.s: autoli/http/http11_parser.rl.cc.s
+
+.PHONY : autoli/http/http11_parser.rl.s
+
+# target to generate assembly for a file
+autoli/http/http11_parser.rl.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.s
+.PHONY : autoli/http/http11_parser.rl.cc.s
+
+autoli/http/http_parser.o: autoli/http/http_parser.cc.o
+
+.PHONY : autoli/http/http_parser.o
+
+# target to build an object file
+autoli/http/http_parser.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o
+.PHONY : autoli/http/http_parser.cc.o
+
+autoli/http/http_parser.i: autoli/http/http_parser.cc.i
+
+.PHONY : autoli/http/http_parser.i
+
+# target to preprocess a source file
+autoli/http/http_parser.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http_parser.cc.i
+.PHONY : autoli/http/http_parser.cc.i
+
+autoli/http/http_parser.s: autoli/http/http_parser.cc.s
+
+.PHONY : autoli/http/http_parser.s
+
+# target to generate assembly for a file
+autoli/http/http_parser.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http_parser.cc.s
+.PHONY : autoli/http/http_parser.cc.s
+
+autoli/http/httpclient_parser.rl.o: autoli/http/httpclient_parser.rl.cc.o
+
+.PHONY : autoli/http/httpclient_parser.rl.o
+
+# target to build an object file
+autoli/http/httpclient_parser.rl.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o
+.PHONY : autoli/http/httpclient_parser.rl.cc.o
+
+autoli/http/httpclient_parser.rl.i: autoli/http/httpclient_parser.rl.cc.i
+
+.PHONY : autoli/http/httpclient_parser.rl.i
+
+# target to preprocess a source file
+autoli/http/httpclient_parser.rl.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.i
+.PHONY : autoli/http/httpclient_parser.rl.cc.i
+
+autoli/http/httpclient_parser.rl.s: autoli/http/httpclient_parser.rl.cc.s
+
+.PHONY : autoli/http/httpclient_parser.rl.s
+
+# target to generate assembly for a file
+autoli/http/httpclient_parser.rl.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.s
+.PHONY : autoli/http/httpclient_parser.rl.cc.s
 
 autoli/iomanager.o: autoli/iomanager.cc.o
 
@@ -379,6 +725,60 @@ autoli/scheduler.cc.s:
 	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/scheduler.cc.s
 .PHONY : autoli/scheduler.cc.s
 
+autoli/socket.o: autoli/socket.cc.o
+
+.PHONY : autoli/socket.o
+
+# target to build an object file
+autoli/socket.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/socket.cc.o
+.PHONY : autoli/socket.cc.o
+
+autoli/socket.i: autoli/socket.cc.i
+
+.PHONY : autoli/socket.i
+
+# target to preprocess a source file
+autoli/socket.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/socket.cc.i
+.PHONY : autoli/socket.cc.i
+
+autoli/socket.s: autoli/socket.cc.s
+
+.PHONY : autoli/socket.s
+
+# target to generate assembly for a file
+autoli/socket.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/socket.cc.s
+.PHONY : autoli/socket.cc.s
+
+autoli/tcp_server.o: autoli/tcp_server.cc.o
+
+.PHONY : autoli/tcp_server.o
+
+# target to build an object file
+autoli/tcp_server.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/tcp_server.cc.o
+.PHONY : autoli/tcp_server.cc.o
+
+autoli/tcp_server.i: autoli/tcp_server.cc.i
+
+.PHONY : autoli/tcp_server.i
+
+# target to preprocess a source file
+autoli/tcp_server.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/tcp_server.cc.i
+.PHONY : autoli/tcp_server.cc.i
+
+autoli/tcp_server.s: autoli/tcp_server.cc.s
+
+.PHONY : autoli/tcp_server.s
+
+# target to generate assembly for a file
+autoli/tcp_server.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/tcp_server.cc.s
+.PHONY : autoli/tcp_server.cc.s
+
 autoli/thread.o: autoli/thread.cc.o
 
 .PHONY : autoli/thread.o
@@ -460,6 +860,87 @@ autoli/util.cc.s:
 	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/util.cc.s
 .PHONY : autoli/util.cc.s
 
+examples/echo_server.o: examples/echo_server.cc.o
+
+.PHONY : examples/echo_server.o
+
+# target to build an object file
+examples/echo_server.cc.o:
+	$(MAKE) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cc.o
+.PHONY : examples/echo_server.cc.o
+
+examples/echo_server.i: examples/echo_server.cc.i
+
+.PHONY : examples/echo_server.i
+
+# target to preprocess a source file
+examples/echo_server.cc.i:
+	$(MAKE) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cc.i
+.PHONY : examples/echo_server.cc.i
+
+examples/echo_server.s: examples/echo_server.cc.s
+
+.PHONY : examples/echo_server.s
+
+# target to generate assembly for a file
+examples/echo_server.cc.s:
+	$(MAKE) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cc.s
+.PHONY : examples/echo_server.cc.s
+
+examples/echo_server_udp.o: examples/echo_server_udp.cc.o
+
+.PHONY : examples/echo_server_udp.o
+
+# target to build an object file
+examples/echo_server_udp.cc.o:
+	$(MAKE) -f CMakeFiles/echo_server_udp.dir/build.make CMakeFiles/echo_server_udp.dir/examples/echo_server_udp.cc.o
+.PHONY : examples/echo_server_udp.cc.o
+
+examples/echo_server_udp.i: examples/echo_server_udp.cc.i
+
+.PHONY : examples/echo_server_udp.i
+
+# target to preprocess a source file
+examples/echo_server_udp.cc.i:
+	$(MAKE) -f CMakeFiles/echo_server_udp.dir/build.make CMakeFiles/echo_server_udp.dir/examples/echo_server_udp.cc.i
+.PHONY : examples/echo_server_udp.cc.i
+
+examples/echo_server_udp.s: examples/echo_server_udp.cc.s
+
+.PHONY : examples/echo_server_udp.s
+
+# target to generate assembly for a file
+examples/echo_server_udp.cc.s:
+	$(MAKE) -f CMakeFiles/echo_server_udp.dir/build.make CMakeFiles/echo_server_udp.dir/examples/echo_server_udp.cc.s
+.PHONY : examples/echo_server_udp.cc.s
+
+examples/echo_udp_client.o: examples/echo_udp_client.cc.o
+
+.PHONY : examples/echo_udp_client.o
+
+# target to build an object file
+examples/echo_udp_client.cc.o:
+	$(MAKE) -f CMakeFiles/echo_udp_client.dir/build.make CMakeFiles/echo_udp_client.dir/examples/echo_udp_client.cc.o
+.PHONY : examples/echo_udp_client.cc.o
+
+examples/echo_udp_client.i: examples/echo_udp_client.cc.i
+
+.PHONY : examples/echo_udp_client.i
+
+# target to preprocess a source file
+examples/echo_udp_client.cc.i:
+	$(MAKE) -f CMakeFiles/echo_udp_client.dir/build.make CMakeFiles/echo_udp_client.dir/examples/echo_udp_client.cc.i
+.PHONY : examples/echo_udp_client.cc.i
+
+examples/echo_udp_client.s: examples/echo_udp_client.cc.s
+
+.PHONY : examples/echo_udp_client.s
+
+# target to generate assembly for a file
+examples/echo_udp_client.cc.s:
+	$(MAKE) -f CMakeFiles/echo_udp_client.dir/build.make CMakeFiles/echo_udp_client.dir/examples/echo_udp_client.cc.s
+.PHONY : examples/echo_udp_client.cc.s
+
 tests/test.o: tests/test.cc.o
 
 .PHONY : tests/test.o
@@ -486,6 +967,60 @@ tests/test.s: tests/test.cc.s
 tests/test.cc.s:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cc.s
 .PHONY : tests/test.cc.s
+
+tests/test_address.o: tests/test_address.cc.o
+
+.PHONY : tests/test_address.o
+
+# target to build an object file
+tests/test_address.cc.o:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.o
+.PHONY : tests/test_address.cc.o
+
+tests/test_address.i: tests/test_address.cc.i
+
+.PHONY : tests/test_address.i
+
+# target to preprocess a source file
+tests/test_address.cc.i:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.i
+.PHONY : tests/test_address.cc.i
+
+tests/test_address.s: tests/test_address.cc.s
+
+.PHONY : tests/test_address.s
+
+# target to generate assembly for a file
+tests/test_address.cc.s:
+	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.s
+.PHONY : tests/test_address.cc.s
+
+tests/test_bytearray.o: tests/test_bytearray.cc.o
+
+.PHONY : tests/test_bytearray.o
+
+# target to build an object file
+tests/test_bytearray.cc.o:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o
+.PHONY : tests/test_bytearray.cc.o
+
+tests/test_bytearray.i: tests/test_bytearray.cc.i
+
+.PHONY : tests/test_bytearray.i
+
+# target to preprocess a source file
+tests/test_bytearray.cc.i:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.i
+.PHONY : tests/test_bytearray.cc.i
+
+tests/test_bytearray.s: tests/test_bytearray.cc.s
+
+.PHONY : tests/test_bytearray.s
+
+# target to generate assembly for a file
+tests/test_bytearray.cc.s:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.s
+.PHONY : tests/test_bytearray.cc.s
 
 tests/test_config.o: tests/test_config.cc.o
 
@@ -541,6 +1076,87 @@ tests/test_fiber.cc.s:
 	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
 .PHONY : tests/test_fiber.cc.s
 
+tests/test_hook.o: tests/test_hook.cc.o
+
+.PHONY : tests/test_hook.o
+
+# target to build an object file
+tests/test_hook.cc.o:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.o
+.PHONY : tests/test_hook.cc.o
+
+tests/test_hook.i: tests/test_hook.cc.i
+
+.PHONY : tests/test_hook.i
+
+# target to preprocess a source file
+tests/test_hook.cc.i:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.i
+.PHONY : tests/test_hook.cc.i
+
+tests/test_hook.s: tests/test_hook.cc.s
+
+.PHONY : tests/test_hook.s
+
+# target to generate assembly for a file
+tests/test_hook.cc.s:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.s
+.PHONY : tests/test_hook.cc.s
+
+tests/test_http.o: tests/test_http.cc.o
+
+.PHONY : tests/test_http.o
+
+# target to build an object file
+tests/test_http.cc.o:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cc.o
+.PHONY : tests/test_http.cc.o
+
+tests/test_http.i: tests/test_http.cc.i
+
+.PHONY : tests/test_http.i
+
+# target to preprocess a source file
+tests/test_http.cc.i:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cc.i
+.PHONY : tests/test_http.cc.i
+
+tests/test_http.s: tests/test_http.cc.s
+
+.PHONY : tests/test_http.s
+
+# target to generate assembly for a file
+tests/test_http.cc.s:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cc.s
+.PHONY : tests/test_http.cc.s
+
+tests/test_http_parser.o: tests/test_http_parser.cc.o
+
+.PHONY : tests/test_http_parser.o
+
+# target to build an object file
+tests/test_http_parser.cc.o:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.o
+.PHONY : tests/test_http_parser.cc.o
+
+tests/test_http_parser.i: tests/test_http_parser.cc.i
+
+.PHONY : tests/test_http_parser.i
+
+# target to preprocess a source file
+tests/test_http_parser.cc.i:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.i
+.PHONY : tests/test_http_parser.cc.i
+
+tests/test_http_parser.s: tests/test_http_parser.cc.s
+
+.PHONY : tests/test_http_parser.s
+
+# target to generate assembly for a file
+tests/test_http_parser.cc.s:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.s
+.PHONY : tests/test_http_parser.cc.s
+
 tests/test_iomanager.o: tests/test_iomanager.cc.o
 
 .PHONY : tests/test_iomanager.o
@@ -594,6 +1210,60 @@ tests/test_scheduler.s: tests/test_scheduler.cc.s
 tests/test_scheduler.cc.s:
 	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.s
 .PHONY : tests/test_scheduler.cc.s
+
+tests/test_socket.o: tests/test_socket.cc.o
+
+.PHONY : tests/test_socket.o
+
+# target to build an object file
+tests/test_socket.cc.o:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.o
+.PHONY : tests/test_socket.cc.o
+
+tests/test_socket.i: tests/test_socket.cc.i
+
+.PHONY : tests/test_socket.i
+
+# target to preprocess a source file
+tests/test_socket.cc.i:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.i
+.PHONY : tests/test_socket.cc.i
+
+tests/test_socket.s: tests/test_socket.cc.s
+
+.PHONY : tests/test_socket.s
+
+# target to generate assembly for a file
+tests/test_socket.cc.s:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.s
+.PHONY : tests/test_socket.cc.s
+
+tests/test_tcp_server.o: tests/test_tcp_server.cc.o
+
+.PHONY : tests/test_tcp_server.o
+
+# target to build an object file
+tests/test_tcp_server.cc.o:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.o
+.PHONY : tests/test_tcp_server.cc.o
+
+tests/test_tcp_server.i: tests/test_tcp_server.cc.i
+
+.PHONY : tests/test_tcp_server.i
+
+# target to preprocess a source file
+tests/test_tcp_server.cc.i:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.i
+.PHONY : tests/test_tcp_server.cc.i
+
+tests/test_tcp_server.s: tests/test_tcp_server.cc.s
+
+.PHONY : tests/test_tcp_server.s
+
+# target to generate assembly for a file
+tests/test_tcp_server.cc.s:
+	$(MAKE) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.s
+.PHONY : tests/test_tcp_server.cc.s
 
 tests/test_thread.o: tests/test_thread.cc.o
 
@@ -655,22 +1325,56 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... test_iomanager"
-	@echo "... test_fiber"
 	@echo "... rebuild_cache"
-	@echo "... test_util"
-	@echo "... test_config"
 	@echo "... edit_cache"
-	@echo "... test_thread"
-	@echo "... test"
+	@echo "... echo_server"
+	@echo "... test_tcp_server"
+	@echo "... test_http_parser"
+	@echo "... echo_server_udp"
 	@echo "... test_scheduler"
+	@echo "... test"
+	@echo "... test_thread"
+	@echo "... test_config"
+	@echo "... test_bytearray"
+	@echo "... test_util"
+	@echo "... echo_udp_client"
+	@echo "... test_fiber"
+	@echo "... test_address"
+	@echo "... test_iomanager"
+	@echo "... test_hook"
+	@echo "... test_socket"
 	@echo "... autoli"
+	@echo "... test_http"
+	@echo "... autoli/address.o"
+	@echo "... autoli/address.i"
+	@echo "... autoli/address.s"
+	@echo "... autoli/bytearray.o"
+	@echo "... autoli/bytearray.i"
+	@echo "... autoli/bytearray.s"
 	@echo "... autoli/config.o"
 	@echo "... autoli/config.i"
 	@echo "... autoli/config.s"
+	@echo "... autoli/fd_manager.o"
+	@echo "... autoli/fd_manager.i"
+	@echo "... autoli/fd_manager.s"
 	@echo "... autoli/fiber.o"
 	@echo "... autoli/fiber.i"
 	@echo "... autoli/fiber.s"
+	@echo "... autoli/hook.o"
+	@echo "... autoli/hook.i"
+	@echo "... autoli/hook.s"
+	@echo "... autoli/http/http.o"
+	@echo "... autoli/http/http.i"
+	@echo "... autoli/http/http.s"
+	@echo "... autoli/http/http11_parser.rl.o"
+	@echo "... autoli/http/http11_parser.rl.i"
+	@echo "... autoli/http/http11_parser.rl.s"
+	@echo "... autoli/http/http_parser.o"
+	@echo "... autoli/http/http_parser.i"
+	@echo "... autoli/http/http_parser.s"
+	@echo "... autoli/http/httpclient_parser.rl.o"
+	@echo "... autoli/http/httpclient_parser.rl.i"
+	@echo "... autoli/http/httpclient_parser.rl.s"
 	@echo "... autoli/iomanager.o"
 	@echo "... autoli/iomanager.i"
 	@echo "... autoli/iomanager.s"
@@ -683,6 +1387,12 @@ help:
 	@echo "... autoli/scheduler.o"
 	@echo "... autoli/scheduler.i"
 	@echo "... autoli/scheduler.s"
+	@echo "... autoli/socket.o"
+	@echo "... autoli/socket.i"
+	@echo "... autoli/socket.s"
+	@echo "... autoli/tcp_server.o"
+	@echo "... autoli/tcp_server.i"
+	@echo "... autoli/tcp_server.s"
 	@echo "... autoli/thread.o"
 	@echo "... autoli/thread.i"
 	@echo "... autoli/thread.s"
@@ -692,21 +1402,51 @@ help:
 	@echo "... autoli/util.o"
 	@echo "... autoli/util.i"
 	@echo "... autoli/util.s"
+	@echo "... examples/echo_server.o"
+	@echo "... examples/echo_server.i"
+	@echo "... examples/echo_server.s"
+	@echo "... examples/echo_server_udp.o"
+	@echo "... examples/echo_server_udp.i"
+	@echo "... examples/echo_server_udp.s"
+	@echo "... examples/echo_udp_client.o"
+	@echo "... examples/echo_udp_client.i"
+	@echo "... examples/echo_udp_client.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
+	@echo "... tests/test_address.o"
+	@echo "... tests/test_address.i"
+	@echo "... tests/test_address.s"
+	@echo "... tests/test_bytearray.o"
+	@echo "... tests/test_bytearray.i"
+	@echo "... tests/test_bytearray.s"
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
 	@echo "... tests/test_fiber.o"
 	@echo "... tests/test_fiber.i"
 	@echo "... tests/test_fiber.s"
+	@echo "... tests/test_hook.o"
+	@echo "... tests/test_hook.i"
+	@echo "... tests/test_hook.s"
+	@echo "... tests/test_http.o"
+	@echo "... tests/test_http.i"
+	@echo "... tests/test_http.s"
+	@echo "... tests/test_http_parser.o"
+	@echo "... tests/test_http_parser.i"
+	@echo "... tests/test_http_parser.s"
 	@echo "... tests/test_iomanager.o"
 	@echo "... tests/test_iomanager.i"
 	@echo "... tests/test_iomanager.s"
 	@echo "... tests/test_scheduler.o"
 	@echo "... tests/test_scheduler.i"
 	@echo "... tests/test_scheduler.s"
+	@echo "... tests/test_socket.o"
+	@echo "... tests/test_socket.i"
+	@echo "... tests/test_socket.s"
+	@echo "... tests/test_tcp_server.o"
+	@echo "... tests/test_tcp_server.i"
+	@echo "... tests/test_tcp_server.s"
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"
