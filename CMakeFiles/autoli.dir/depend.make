@@ -78,6 +78,31 @@ CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o: autoli/http/http11_comm
 CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o: autoli/http/http11_parser.h
 CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o: autoli/http/http11_parser.rl.cc
 
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/http/http.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/http/http11_common.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/http/http11_parser.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/http/http_connection.cc
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/http/http_connection.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/http/http_parser.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/http/httpclient_parser.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/address.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/bytearray.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/fiber.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/iomanager.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/log.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/noncopyable.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/scheduler.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/singleton.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/socket.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/stream.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/streams/socket_stream.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/streams/zlib_stream.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/thread.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/timer.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/uri.h
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/util.h
+
 CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o: autoli/http/http.h
 CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o: autoli/http/http11_common.h
 CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o: autoli/http/http11_parser.h
@@ -93,9 +118,70 @@ CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o: autoli/singleton.h
 CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o: autoli/thread.h
 CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o: autoli/util.h
 
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/http/http.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/http/http_server.cc
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/http/http_server.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/http/http_session.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/http/servlet.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/address.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/bytearray.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/config.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/fiber.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/iomanager.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/log.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/noncopyable.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/scheduler.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/singleton.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/socket.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/stream.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/streams/socket_stream.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/tcp_server.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/thread.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/timer.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/util.h
+
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/http/http.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/http/http11_common.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/http/http11_parser.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/http/http_parser.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/http/http_session.cc
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/http/http_session.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/http/httpclient_parser.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/address.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/bytearray.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/fiber.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/iomanager.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/noncopyable.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/scheduler.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/socket.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/stream.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/streams/socket_stream.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/thread.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/timer.h
+
 CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o: autoli/http/http11_common.h
 CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o: autoli/http/httpclient_parser.h
 CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o: autoli/http/httpclient_parser.rl.cc
+
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/http/http.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/http/http_session.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/http/servlet.cc
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/http/servlet.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/address.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/bytearray.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/fiber.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/iomanager.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/noncopyable.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/scheduler.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/socket.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/stream.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/streams/socket_stream.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/thread.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/timer.h
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/util.h
 
 CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/fiber.h
 CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/iomanager.cc
@@ -158,6 +244,38 @@ CMakeFiles/autoli.dir/autoli/socket.cc.o: autoli/thread.h
 CMakeFiles/autoli.dir/autoli/socket.cc.o: autoli/timer.h
 CMakeFiles/autoli.dir/autoli/socket.cc.o: autoli/util.h
 
+CMakeFiles/autoli.dir/autoli/stream.cc.o: autoli/bytearray.h
+CMakeFiles/autoli.dir/autoli/stream.cc.o: autoli/stream.cc
+CMakeFiles/autoli.dir/autoli/stream.cc.o: autoli/stream.h
+
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/streams/socket_stream.cc
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/streams/socket_stream.h
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/address.h
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/bytearray.h
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/fiber.h
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/iomanager.h
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/noncopyable.h
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/scheduler.h
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/socket.h
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/stream.h
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/thread.h
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/timer.h
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/util.h
+
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: autoli/streams/zlib_stream.cc
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: autoli/streams/zlib_stream.h
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: autoli/bytearray.h
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: autoli/fiber.h
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: autoli/log.h
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: autoli/macro.h
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: autoli/mutex.h
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: autoli/noncopyable.h
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: autoli/singleton.h
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: autoli/stream.h
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: autoli/thread.h
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: autoli/util.h
+
 CMakeFiles/autoli.dir/autoli/tcp_server.cc.o: autoli/address.h
 CMakeFiles/autoli.dir/autoli/tcp_server.cc.o: autoli/config.h
 CMakeFiles/autoli.dir/autoli/tcp_server.cc.o: autoli/fiber.h
@@ -190,6 +308,10 @@ CMakeFiles/autoli.dir/autoli/timer.cc.o: autoli/thread.h
 CMakeFiles/autoli.dir/autoli/timer.cc.o: autoli/timer.cc
 CMakeFiles/autoli.dir/autoli/timer.cc.o: autoli/timer.h
 CMakeFiles/autoli.dir/autoli/timer.cc.o: autoli/util.h
+
+CMakeFiles/autoli.dir/autoli/uri.rl.cc.o: autoli/address.h
+CMakeFiles/autoli.dir/autoli/uri.rl.cc.o: autoli/uri.h
+CMakeFiles/autoli.dir/autoli/uri.rl.cc.o: autoli/uri.rl.cc
 
 CMakeFiles/autoli.dir/autoli/util.cc.o: autoli/fiber.h
 CMakeFiles/autoli.dir/autoli/util.cc.o: autoli/log.h

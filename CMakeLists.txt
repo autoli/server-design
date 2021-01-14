@@ -10,6 +10,7 @@ link_directories(/usr/local/lib)
 find_library(YAMLCPP yaml-cpp)
 find_library(PTHREAD pthread)
 message("***",${YAMLCPP})
+link_libraries(z)
 set(LIB_SRC
         autoli/address.cc
         autoli/bytearray.cc
@@ -18,6 +19,11 @@ set(LIB_SRC
         autoli/http/http_parser.cc
         autoli/http/http11_parser.rl.cc
         autoli/http/httpclient_parser.rl.cc
+        autoli/http/http_session.cc
+        autoli/http/http_server.cc
+        autoli/http/servlet.cc
+        autoli/http/http_connection.cc
+        
         autoli/iomanager.cc
         autoli/util.cc
         autoli/hook.cc
@@ -25,11 +31,17 @@ set(LIB_SRC
         autoli/thread.cc
         autoli/mutex.cc
         autoli/fiber.cc
+        
         autoli/scheduler.cc
+        autoli/stream.cc
+        autoli/streams/socket_stream.cc
+        autoli/streams/zlib_stream.cc
+
         autoli/timer.cc
         autoli/fd_manager.cc
         autoli/socket.cc
-        autoli/tcp_server.cc)
+        autoli/tcp_server.cc
+        autoli/uri.rl.cc)
 
 add_library(autoli SHARED  ${LIB_SRC})
 force_redefine_file_macro_for_sources(autoli) #重定义__FILE__，以使用相对路径，这样日志使用相对路径
@@ -126,6 +138,11 @@ add_executable(echo_udp_client examples/echo_udp_client.cc)
 add_dependencies(echo_udp_client autoli)
 force_redefine_file_macro_for_sources(echo_udp_client) 
 target_link_libraries(echo_udp_client ${LIBS})
+
+
+autoli_add_executable(test_http_server "tests/test_http_server.cc" autoli "${LIBS}")
+autoli_add_executable(test_http_connection "tests/test_http_connection.cc" autoli "${LIBS}" )
+autoli_add_executable(test_uri "tests/test_uri.cc" autoli "${LIBS}" )
 
 SET(EXECUTABLE_OUTPUT_PATH  ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

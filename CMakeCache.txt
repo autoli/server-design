@@ -230,6 +230,9 @@ autoli-server_SOURCE_DIR:STATIC=/media/llaron/7E96ADB696AD6F79/代码/高性能�
 //Value Computed by CMake
 autoli_BINARY_DIR:STATIC=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server
 
+//Dependencies for the target
+autoli_LIB_DEPENDS:STATIC=general;z;
+
 //Value Computed by CMake
 autoli_SOURCE_DIR:STATIC=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server
 

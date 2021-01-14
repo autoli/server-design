@@ -22,6 +22,14 @@ CXX_INCLUDES = -I/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli
 
 # Custom defines: CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o_DEFINES = __FILE__="autoli/http/httpclient_parser.rl.cc"
 
+# Custom defines: CMakeFiles/autoli.dir/autoli/http/http_session.cc.o_DEFINES = __FILE__="autoli/http/http_session.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/http/http_server.cc.o_DEFINES = __FILE__="autoli/http/http_server.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/http/servlet.cc.o_DEFINES = __FILE__="autoli/http/servlet.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o_DEFINES = __FILE__="autoli/http/http_connection.cc"
+
 # Custom defines: CMakeFiles/autoli.dir/autoli/iomanager.cc.o_DEFINES = __FILE__="autoli/iomanager.cc"
 
 # Custom defines: CMakeFiles/autoli.dir/autoli/util.cc.o_DEFINES = __FILE__="autoli/util.cc"
@@ -38,6 +46,12 @@ CXX_INCLUDES = -I/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli
 
 # Custom defines: CMakeFiles/autoli.dir/autoli/scheduler.cc.o_DEFINES = __FILE__="autoli/scheduler.cc"
 
+# Custom defines: CMakeFiles/autoli.dir/autoli/stream.cc.o_DEFINES = __FILE__="autoli/stream.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o_DEFINES = __FILE__="autoli/streams/socket_stream.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o_DEFINES = __FILE__="autoli/streams/zlib_stream.cc"
+
 # Custom defines: CMakeFiles/autoli.dir/autoli/timer.cc.o_DEFINES = __FILE__="autoli/timer.cc"
 
 # Custom defines: CMakeFiles/autoli.dir/autoli/fd_manager.cc.o_DEFINES = __FILE__="autoli/fd_manager.cc"
@@ -45,4 +59,6 @@ CXX_INCLUDES = -I/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli
 # Custom defines: CMakeFiles/autoli.dir/autoli/socket.cc.o_DEFINES = __FILE__="autoli/socket.cc"
 
 # Custom defines: CMakeFiles/autoli.dir/autoli/tcp_server.cc.o_DEFINES = __FILE__="autoli/tcp_server.cc"
+
+# Custom defines: CMakeFiles/autoli.dir/autoli/uri.rl.cc.o_DEFINES = __FILE__="autoli/uri.rl.cc"
 

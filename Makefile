@@ -114,6 +114,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_uri
+
+# Build rule for target.
+test_uri: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_uri
+.PHONY : test_uri
+
+# fast build rule for target.
+test_uri/fast:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/build
+.PHONY : test_uri/fast
+
+#=============================================================================
+# Target rules for targets named test_http_connection
+
+# Build rule for target.
+test_http_connection: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http_connection
+.PHONY : test_http_connection
+
+# fast build rule for target.
+test_http_connection/fast:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/build
+.PHONY : test_http_connection/fast
+
+#=============================================================================
 # Target rules for targets named echo_server
 
 # Build rule for target.
@@ -268,6 +294,19 @@ test_fiber: cmake_check_build_system
 test_fiber/fast:
 	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
 .PHONY : test_fiber/fast
+
+#=============================================================================
+# Target rules for targets named test_http_server
+
+# Build rule for target.
+test_http_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http_server
+.PHONY : test_http_server
+
+# fast build rule for target.
+test_http_server/fast:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/build
+.PHONY : test_http_server/fast
 
 #=============================================================================
 # Target rules for targets named test_address
@@ -563,6 +602,33 @@ autoli/http/http11_parser.rl.cc.s:
 	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.s
 .PHONY : autoli/http/http11_parser.rl.cc.s
 
+autoli/http/http_connection.o: autoli/http/http_connection.cc.o
+
+.PHONY : autoli/http/http_connection.o
+
+# target to build an object file
+autoli/http/http_connection.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o
+.PHONY : autoli/http/http_connection.cc.o
+
+autoli/http/http_connection.i: autoli/http/http_connection.cc.i
+
+.PHONY : autoli/http/http_connection.i
+
+# target to preprocess a source file
+autoli/http/http_connection.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http_connection.cc.i
+.PHONY : autoli/http/http_connection.cc.i
+
+autoli/http/http_connection.s: autoli/http/http_connection.cc.s
+
+.PHONY : autoli/http/http_connection.s
+
+# target to generate assembly for a file
+autoli/http/http_connection.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http_connection.cc.s
+.PHONY : autoli/http/http_connection.cc.s
+
 autoli/http/http_parser.o: autoli/http/http_parser.cc.o
 
 .PHONY : autoli/http/http_parser.o
@@ -590,6 +656,60 @@ autoli/http/http_parser.cc.s:
 	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http_parser.cc.s
 .PHONY : autoli/http/http_parser.cc.s
 
+autoli/http/http_server.o: autoli/http/http_server.cc.o
+
+.PHONY : autoli/http/http_server.o
+
+# target to build an object file
+autoli/http/http_server.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http_server.cc.o
+.PHONY : autoli/http/http_server.cc.o
+
+autoli/http/http_server.i: autoli/http/http_server.cc.i
+
+.PHONY : autoli/http/http_server.i
+
+# target to preprocess a source file
+autoli/http/http_server.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http_server.cc.i
+.PHONY : autoli/http/http_server.cc.i
+
+autoli/http/http_server.s: autoli/http/http_server.cc.s
+
+.PHONY : autoli/http/http_server.s
+
+# target to generate assembly for a file
+autoli/http/http_server.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http_server.cc.s
+.PHONY : autoli/http/http_server.cc.s
+
+autoli/http/http_session.o: autoli/http/http_session.cc.o
+
+.PHONY : autoli/http/http_session.o
+
+# target to build an object file
+autoli/http/http_session.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http_session.cc.o
+.PHONY : autoli/http/http_session.cc.o
+
+autoli/http/http_session.i: autoli/http/http_session.cc.i
+
+.PHONY : autoli/http/http_session.i
+
+# target to preprocess a source file
+autoli/http/http_session.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http_session.cc.i
+.PHONY : autoli/http/http_session.cc.i
+
+autoli/http/http_session.s: autoli/http/http_session.cc.s
+
+.PHONY : autoli/http/http_session.s
+
+# target to generate assembly for a file
+autoli/http/http_session.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/http_session.cc.s
+.PHONY : autoli/http/http_session.cc.s
+
 autoli/http/httpclient_parser.rl.o: autoli/http/httpclient_parser.rl.cc.o
 
 .PHONY : autoli/http/httpclient_parser.rl.o
@@ -616,6 +736,33 @@ autoli/http/httpclient_parser.rl.s: autoli/http/httpclient_parser.rl.cc.s
 autoli/http/httpclient_parser.rl.cc.s:
 	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.s
 .PHONY : autoli/http/httpclient_parser.rl.cc.s
+
+autoli/http/servlet.o: autoli/http/servlet.cc.o
+
+.PHONY : autoli/http/servlet.o
+
+# target to build an object file
+autoli/http/servlet.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/servlet.cc.o
+.PHONY : autoli/http/servlet.cc.o
+
+autoli/http/servlet.i: autoli/http/servlet.cc.i
+
+.PHONY : autoli/http/servlet.i
+
+# target to preprocess a source file
+autoli/http/servlet.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/servlet.cc.i
+.PHONY : autoli/http/servlet.cc.i
+
+autoli/http/servlet.s: autoli/http/servlet.cc.s
+
+.PHONY : autoli/http/servlet.s
+
+# target to generate assembly for a file
+autoli/http/servlet.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/http/servlet.cc.s
+.PHONY : autoli/http/servlet.cc.s
 
 autoli/iomanager.o: autoli/iomanager.cc.o
 
@@ -752,6 +899,87 @@ autoli/socket.cc.s:
 	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/socket.cc.s
 .PHONY : autoli/socket.cc.s
 
+autoli/stream.o: autoli/stream.cc.o
+
+.PHONY : autoli/stream.o
+
+# target to build an object file
+autoli/stream.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/stream.cc.o
+.PHONY : autoli/stream.cc.o
+
+autoli/stream.i: autoli/stream.cc.i
+
+.PHONY : autoli/stream.i
+
+# target to preprocess a source file
+autoli/stream.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/stream.cc.i
+.PHONY : autoli/stream.cc.i
+
+autoli/stream.s: autoli/stream.cc.s
+
+.PHONY : autoli/stream.s
+
+# target to generate assembly for a file
+autoli/stream.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/stream.cc.s
+.PHONY : autoli/stream.cc.s
+
+autoli/streams/socket_stream.o: autoli/streams/socket_stream.cc.o
+
+.PHONY : autoli/streams/socket_stream.o
+
+# target to build an object file
+autoli/streams/socket_stream.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o
+.PHONY : autoli/streams/socket_stream.cc.o
+
+autoli/streams/socket_stream.i: autoli/streams/socket_stream.cc.i
+
+.PHONY : autoli/streams/socket_stream.i
+
+# target to preprocess a source file
+autoli/streams/socket_stream.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.i
+.PHONY : autoli/streams/socket_stream.cc.i
+
+autoli/streams/socket_stream.s: autoli/streams/socket_stream.cc.s
+
+.PHONY : autoli/streams/socket_stream.s
+
+# target to generate assembly for a file
+autoli/streams/socket_stream.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.s
+.PHONY : autoli/streams/socket_stream.cc.s
+
+autoli/streams/zlib_stream.o: autoli/streams/zlib_stream.cc.o
+
+.PHONY : autoli/streams/zlib_stream.o
+
+# target to build an object file
+autoli/streams/zlib_stream.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o
+.PHONY : autoli/streams/zlib_stream.cc.o
+
+autoli/streams/zlib_stream.i: autoli/streams/zlib_stream.cc.i
+
+.PHONY : autoli/streams/zlib_stream.i
+
+# target to preprocess a source file
+autoli/streams/zlib_stream.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.i
+.PHONY : autoli/streams/zlib_stream.cc.i
+
+autoli/streams/zlib_stream.s: autoli/streams/zlib_stream.cc.s
+
+.PHONY : autoli/streams/zlib_stream.s
+
+# target to generate assembly for a file
+autoli/streams/zlib_stream.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.s
+.PHONY : autoli/streams/zlib_stream.cc.s
+
 autoli/tcp_server.o: autoli/tcp_server.cc.o
 
 .PHONY : autoli/tcp_server.o
@@ -832,6 +1060,33 @@ autoli/timer.s: autoli/timer.cc.s
 autoli/timer.cc.s:
 	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/timer.cc.s
 .PHONY : autoli/timer.cc.s
+
+autoli/uri.rl.o: autoli/uri.rl.cc.o
+
+.PHONY : autoli/uri.rl.o
+
+# target to build an object file
+autoli/uri.rl.cc.o:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/uri.rl.cc.o
+.PHONY : autoli/uri.rl.cc.o
+
+autoli/uri.rl.i: autoli/uri.rl.cc.i
+
+.PHONY : autoli/uri.rl.i
+
+# target to preprocess a source file
+autoli/uri.rl.cc.i:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/uri.rl.cc.i
+.PHONY : autoli/uri.rl.cc.i
+
+autoli/uri.rl.s: autoli/uri.rl.cc.s
+
+.PHONY : autoli/uri.rl.s
+
+# target to generate assembly for a file
+autoli/uri.rl.cc.s:
+	$(MAKE) -f CMakeFiles/autoli.dir/build.make CMakeFiles/autoli.dir/autoli/uri.rl.cc.s
+.PHONY : autoli/uri.rl.cc.s
 
 autoli/util.o: autoli/util.cc.o
 
@@ -1130,6 +1385,33 @@ tests/test_http.cc.s:
 	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cc.s
 .PHONY : tests/test_http.cc.s
 
+tests/test_http_connection.o: tests/test_http_connection.cc.o
+
+.PHONY : tests/test_http_connection.o
+
+# target to build an object file
+tests/test_http_connection.cc.o:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cc.o
+.PHONY : tests/test_http_connection.cc.o
+
+tests/test_http_connection.i: tests/test_http_connection.cc.i
+
+.PHONY : tests/test_http_connection.i
+
+# target to preprocess a source file
+tests/test_http_connection.cc.i:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cc.i
+.PHONY : tests/test_http_connection.cc.i
+
+tests/test_http_connection.s: tests/test_http_connection.cc.s
+
+.PHONY : tests/test_http_connection.s
+
+# target to generate assembly for a file
+tests/test_http_connection.cc.s:
+	$(MAKE) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cc.s
+.PHONY : tests/test_http_connection.cc.s
+
 tests/test_http_parser.o: tests/test_http_parser.cc.o
 
 .PHONY : tests/test_http_parser.o
@@ -1156,6 +1438,33 @@ tests/test_http_parser.s: tests/test_http_parser.cc.s
 tests/test_http_parser.cc.s:
 	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.s
 .PHONY : tests/test_http_parser.cc.s
+
+tests/test_http_server.o: tests/test_http_server.cc.o
+
+.PHONY : tests/test_http_server.o
+
+# target to build an object file
+tests/test_http_server.cc.o:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o
+.PHONY : tests/test_http_server.cc.o
+
+tests/test_http_server.i: tests/test_http_server.cc.i
+
+.PHONY : tests/test_http_server.i
+
+# target to preprocess a source file
+tests/test_http_server.cc.i:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cc.i
+.PHONY : tests/test_http_server.cc.i
+
+tests/test_http_server.s: tests/test_http_server.cc.s
+
+.PHONY : tests/test_http_server.s
+
+# target to generate assembly for a file
+tests/test_http_server.cc.s:
+	$(MAKE) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cc.s
+.PHONY : tests/test_http_server.cc.s
 
 tests/test_iomanager.o: tests/test_iomanager.cc.o
 
@@ -1292,6 +1601,33 @@ tests/test_thread.cc.s:
 	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.s
 .PHONY : tests/test_thread.cc.s
 
+tests/test_uri.o: tests/test_uri.cc.o
+
+.PHONY : tests/test_uri.o
+
+# target to build an object file
+tests/test_uri.cc.o:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cc.o
+.PHONY : tests/test_uri.cc.o
+
+tests/test_uri.i: tests/test_uri.cc.i
+
+.PHONY : tests/test_uri.i
+
+# target to preprocess a source file
+tests/test_uri.cc.i:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cc.i
+.PHONY : tests/test_uri.cc.i
+
+tests/test_uri.s: tests/test_uri.cc.s
+
+.PHONY : tests/test_uri.s
+
+# target to generate assembly for a file
+tests/test_uri.cc.s:
+	$(MAKE) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cc.s
+.PHONY : tests/test_uri.cc.s
+
 tests/test_util.o: tests/test_util.cc.o
 
 .PHONY : tests/test_util.o
@@ -1327,6 +1663,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test_uri"
+	@echo "... test_http_connection"
 	@echo "... echo_server"
 	@echo "... test_tcp_server"
 	@echo "... test_http_parser"
@@ -1339,6 +1677,7 @@ help:
 	@echo "... test_util"
 	@echo "... echo_udp_client"
 	@echo "... test_fiber"
+	@echo "... test_http_server"
 	@echo "... test_address"
 	@echo "... test_iomanager"
 	@echo "... test_hook"
@@ -1369,12 +1708,24 @@ help:
 	@echo "... autoli/http/http11_parser.rl.o"
 	@echo "... autoli/http/http11_parser.rl.i"
 	@echo "... autoli/http/http11_parser.rl.s"
+	@echo "... autoli/http/http_connection.o"
+	@echo "... autoli/http/http_connection.i"
+	@echo "... autoli/http/http_connection.s"
 	@echo "... autoli/http/http_parser.o"
 	@echo "... autoli/http/http_parser.i"
 	@echo "... autoli/http/http_parser.s"
+	@echo "... autoli/http/http_server.o"
+	@echo "... autoli/http/http_server.i"
+	@echo "... autoli/http/http_server.s"
+	@echo "... autoli/http/http_session.o"
+	@echo "... autoli/http/http_session.i"
+	@echo "... autoli/http/http_session.s"
 	@echo "... autoli/http/httpclient_parser.rl.o"
 	@echo "... autoli/http/httpclient_parser.rl.i"
 	@echo "... autoli/http/httpclient_parser.rl.s"
+	@echo "... autoli/http/servlet.o"
+	@echo "... autoli/http/servlet.i"
+	@echo "... autoli/http/servlet.s"
 	@echo "... autoli/iomanager.o"
 	@echo "... autoli/iomanager.i"
 	@echo "... autoli/iomanager.s"
@@ -1390,6 +1741,15 @@ help:
 	@echo "... autoli/socket.o"
 	@echo "... autoli/socket.i"
 	@echo "... autoli/socket.s"
+	@echo "... autoli/stream.o"
+	@echo "... autoli/stream.i"
+	@echo "... autoli/stream.s"
+	@echo "... autoli/streams/socket_stream.o"
+	@echo "... autoli/streams/socket_stream.i"
+	@echo "... autoli/streams/socket_stream.s"
+	@echo "... autoli/streams/zlib_stream.o"
+	@echo "... autoli/streams/zlib_stream.i"
+	@echo "... autoli/streams/zlib_stream.s"
 	@echo "... autoli/tcp_server.o"
 	@echo "... autoli/tcp_server.i"
 	@echo "... autoli/tcp_server.s"
@@ -1399,6 +1759,9 @@ help:
 	@echo "... autoli/timer.o"
 	@echo "... autoli/timer.i"
 	@echo "... autoli/timer.s"
+	@echo "... autoli/uri.rl.o"
+	@echo "... autoli/uri.rl.i"
+	@echo "... autoli/uri.rl.s"
 	@echo "... autoli/util.o"
 	@echo "... autoli/util.i"
 	@echo "... autoli/util.s"
@@ -1432,9 +1795,15 @@ help:
 	@echo "... tests/test_http.o"
 	@echo "... tests/test_http.i"
 	@echo "... tests/test_http.s"
+	@echo "... tests/test_http_connection.o"
+	@echo "... tests/test_http_connection.i"
+	@echo "... tests/test_http_connection.s"
 	@echo "... tests/test_http_parser.o"
 	@echo "... tests/test_http_parser.i"
 	@echo "... tests/test_http_parser.s"
+	@echo "... tests/test_http_server.o"
+	@echo "... tests/test_http_server.i"
+	@echo "... tests/test_http_server.s"
 	@echo "... tests/test_iomanager.o"
 	@echo "... tests/test_iomanager.i"
 	@echo "... tests/test_iomanager.s"
@@ -1450,6 +1819,9 @@ help:
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"
+	@echo "... tests/test_uri.o"
+	@echo "... tests/test_uri.i"
+	@echo "... tests/test_uri.s"
 	@echo "... tests/test_util.o"
 	@echo "... tests/test_util.i"
 	@echo "... tests/test_util.s"

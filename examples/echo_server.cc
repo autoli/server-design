@@ -73,4 +73,5 @@ int main(int argc, char** argv) {
     autoli::IOManager iom(2);
     iom.schedule(run);
     return 0;
+    //用浏览器可以访问、该服务器
 }

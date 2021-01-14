@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/address.h
+memory
+-
+string
+-
+sys/types.h
+-
+sys/socket.h
+-
+sys/un.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+iostream
+-
+vector
+-
+map
+-
+
+/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/uri.h
+memory
+-
+string
+-
+stdint.h
+-
+address.h
+/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/address.h
+
+/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/tests/test_uri.cc
+../autoli/uri.h
+/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/uri.h
+iostream
+-
+

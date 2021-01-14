@@ -1,5 +1,7 @@
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/rebuild_cache.dir
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/edit_cache.dir
+/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_uri.dir
+/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_http_connection.dir
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/echo_server.dir
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_tcp_server.dir
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_http_parser.dir
@@ -12,6 +14,7 @@
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_util.dir
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/echo_udp_client.dir
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_fiber.dir
+/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_http_server.dir
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_address.dir
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_iomanager.dir
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/test_hook.dir

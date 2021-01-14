@@ -78,6 +78,31 @@ CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_common.h
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_parser.h
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_parser.rl.cc
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_common.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_parser.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_connection.cc
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_connection.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_parser.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/httpclient_parser.h
+ autoli/address.h
+ autoli/bytearray.h
+ autoli/fiber.h
+ autoli/iomanager.h
+ autoli/log.h
+ autoli/mutex.h
+ autoli/noncopyable.h
+ autoli/scheduler.h
+ autoli/singleton.h
+ autoli/socket.h
+ autoli/stream.h
+ autoli/streams/socket_stream.h
+ autoli/streams/zlib_stream.h
+ autoli/thread.h
+ autoli/timer.h
+ autoli/uri.h
+ autoli/util.h
 CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http.h
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_common.h
@@ -93,10 +118,71 @@ CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o
  autoli/singleton.h
  autoli/thread.h
  autoli/util.h
+CMakeFiles/autoli.dir/autoli/http/http_server.cc.o
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_server.cc
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_server.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_session.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/servlet.h
+ autoli/address.h
+ autoli/bytearray.h
+ autoli/config.h
+ autoli/fiber.h
+ autoli/iomanager.h
+ autoli/log.h
+ autoli/mutex.h
+ autoli/noncopyable.h
+ autoli/scheduler.h
+ autoli/singleton.h
+ autoli/socket.h
+ autoli/stream.h
+ autoli/streams/socket_stream.h
+ autoli/tcp_server.h
+ autoli/thread.h
+ autoli/timer.h
+ autoli/util.h
+CMakeFiles/autoli.dir/autoli/http/http_session.cc.o
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_common.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_parser.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_parser.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_session.cc
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_session.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/httpclient_parser.h
+ autoli/address.h
+ autoli/bytearray.h
+ autoli/fiber.h
+ autoli/iomanager.h
+ autoli/mutex.h
+ autoli/noncopyable.h
+ autoli/scheduler.h
+ autoli/socket.h
+ autoli/stream.h
+ autoli/streams/socket_stream.h
+ autoli/thread.h
+ autoli/timer.h
 CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_common.h
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/httpclient_parser.h
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/httpclient_parser.rl.cc
+CMakeFiles/autoli.dir/autoli/http/servlet.cc.o
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_session.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/servlet.cc
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/servlet.h
+ autoli/address.h
+ autoli/bytearray.h
+ autoli/fiber.h
+ autoli/iomanager.h
+ autoli/mutex.h
+ autoli/noncopyable.h
+ autoli/scheduler.h
+ autoli/socket.h
+ autoli/stream.h
+ autoli/streams/socket_stream.h
+ autoli/thread.h
+ autoli/timer.h
+ autoli/util.h
 CMakeFiles/autoli.dir/autoli/iomanager.cc.o
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/fiber.h
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/iomanager.cc
@@ -158,6 +244,38 @@ CMakeFiles/autoli.dir/autoli/socket.cc.o
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/thread.h
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/timer.h
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util.h
+CMakeFiles/autoli.dir/autoli/stream.cc.o
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/bytearray.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/stream.cc
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/stream.h
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/socket_stream.cc
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/socket_stream.h
+ autoli/address.h
+ autoli/bytearray.h
+ autoli/fiber.h
+ autoli/iomanager.h
+ autoli/mutex.h
+ autoli/noncopyable.h
+ autoli/scheduler.h
+ autoli/socket.h
+ autoli/stream.h
+ autoli/thread.h
+ autoli/timer.h
+ autoli/util.h
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/zlib_stream.cc
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/zlib_stream.h
+ autoli/bytearray.h
+ autoli/fiber.h
+ autoli/log.h
+ autoli/macro.h
+ autoli/mutex.h
+ autoli/noncopyable.h
+ autoli/singleton.h
+ autoli/stream.h
+ autoli/thread.h
+ autoli/util.h
 CMakeFiles/autoli.dir/autoli/tcp_server.cc.o
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/address.h
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/config.h
@@ -191,6 +309,10 @@ CMakeFiles/autoli.dir/autoli/timer.cc.o
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/timer.cc
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/timer.h
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util.h
+CMakeFiles/autoli.dir/autoli/uri.rl.cc.o
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/address.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/uri.h
+ /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/uri.rl.cc
 CMakeFiles/autoli.dir/autoli/util.cc.o
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/fiber.h
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/log.h
