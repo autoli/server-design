@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+b9b42b5e2d464dbd974ee97f776f3d82 autoli/http/http11_parser.rl.cc
+68d9da83fa67b8bd37eab97f76dbca82 autoli/http/httpclient_parser.rl.cc
+31139b3c5e85598cba5c4b85fa02e23b autoli/ns/ns_protobuf.pb.cc
+85ccfbb69d6e12cbb502df54eb4cff9f autoli/uri.rl.cc

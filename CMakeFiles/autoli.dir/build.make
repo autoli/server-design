@@ -60,9 +60,28 @@ include CMakeFiles/autoli.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/autoli.dir/flags.make
 
+autoli/http/http11_parser.rl.cc: autoli/http/http11_parser.rl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating autoli/http/http11_parser.rl.cc"
+	cd /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http
+	ragel /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_parser.rl -o /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_parser.rl.cc -l -C -G2 --error-format=msvc
+
+autoli/http/httpclient_parser.rl.cc: autoli/http/httpclient_parser.rl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating autoli/http/httpclient_parser.rl.cc"
+	cd /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http
+	ragel /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/httpclient_parser.rl -o /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/httpclient_parser.rl.cc -l -C -G2 --error-format=msvc
+
+autoli/uri.rl.cc: autoli/uri.rl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating autoli/uri.rl.cc"
+	cd /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli
+	ragel /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/uri.rl -o /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/uri.rl.cc -l -C -G2 --error-format=msvc
+
+autoli/ns/ns_protobuf.pb.cc: autoli/ns/ns_protobuf.proto
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating autoli/ns/ns_protobuf.pb.cc"
+	protoc --cpp_out=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server -I/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ns/ns_protobuf.proto
+
 CMakeFiles/autoli.dir/autoli/address.cc.o: CMakeFiles/autoli.dir/flags.make
 CMakeFiles/autoli.dir/autoli/address.cc.o: autoli/address.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/autoli.dir/autoli/address.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/autoli.dir/autoli/address.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/address.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/address.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/address.cc
 
 CMakeFiles/autoli.dir/autoli/address.cc.i: cmake_force
@@ -75,7 +94,7 @@ CMakeFiles/autoli.dir/autoli/address.cc.s: cmake_force
 
 CMakeFiles/autoli.dir/autoli/bytearray.cc.o: CMakeFiles/autoli.dir/flags.make
 CMakeFiles/autoli.dir/autoli/bytearray.cc.o: autoli/bytearray.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/autoli.dir/autoli/bytearray.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/autoli.dir/autoli/bytearray.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/bytearray.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/bytearray.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/bytearray.cc
 
 CMakeFiles/autoli.dir/autoli/bytearray.cc.i: cmake_force
@@ -86,22 +105,204 @@ CMakeFiles/autoli.dir/autoli/bytearray.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/bytearray.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/bytearray.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/bytearray.cc -o CMakeFiles/autoli.dir/autoli/bytearray.cc.s
 
-CMakeFiles/autoli.dir/autoli/log.cc.o: CMakeFiles/autoli.dir/flags.make
-CMakeFiles/autoli.dir/autoli/log.cc.o: autoli/log.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/autoli.dir/autoli/log.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/log.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/log.cc
+CMakeFiles/autoli.dir/autoli/config.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/config.cc.o: autoli/config.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/autoli.dir/autoli/config.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/config.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/config.cc
 
-CMakeFiles/autoli.dir/autoli/log.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/log.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/log.cc > CMakeFiles/autoli.dir/autoli/log.cc.i
+CMakeFiles/autoli.dir/autoli/config.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/config.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/config.cc > CMakeFiles/autoli.dir/autoli/config.cc.i
 
-CMakeFiles/autoli.dir/autoli/log.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/log.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/log.cc -o CMakeFiles/autoli.dir/autoli/log.cc.s
+CMakeFiles/autoli.dir/autoli/config.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/config.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/config.cc -o CMakeFiles/autoli.dir/autoli/config.cc.s
+
+CMakeFiles/autoli.dir/autoli/db/fox_thread.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/db/fox_thread.cc.o: autoli/db/fox_thread.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/autoli.dir/autoli/db/fox_thread.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/db/fox_thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/db/fox_thread.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/db/fox_thread.cc
+
+CMakeFiles/autoli.dir/autoli/db/fox_thread.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/db/fox_thread.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/db/fox_thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/db/fox_thread.cc > CMakeFiles/autoli.dir/autoli/db/fox_thread.cc.i
+
+CMakeFiles/autoli.dir/autoli/db/fox_thread.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/db/fox_thread.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/db/fox_thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/db/fox_thread.cc -o CMakeFiles/autoli.dir/autoli/db/fox_thread.cc.s
+
+CMakeFiles/autoli.dir/autoli/db/mysql.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/db/mysql.cc.o: autoli/db/mysql.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/autoli.dir/autoli/db/mysql.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/db/mysql.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/db/mysql.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/db/mysql.cc
+
+CMakeFiles/autoli.dir/autoli/db/mysql.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/db/mysql.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/db/mysql.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/db/mysql.cc > CMakeFiles/autoli.dir/autoli/db/mysql.cc.i
+
+CMakeFiles/autoli.dir/autoli/db/mysql.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/db/mysql.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/db/mysql.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/db/mysql.cc -o CMakeFiles/autoli.dir/autoli/db/mysql.cc.s
+
+CMakeFiles/autoli.dir/autoli/db/redis.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/db/redis.cc.o: autoli/db/redis.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/autoli.dir/autoli/db/redis.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/db/redis.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/db/redis.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/db/redis.cc
+
+CMakeFiles/autoli.dir/autoli/db/redis.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/db/redis.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/db/redis.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/db/redis.cc > CMakeFiles/autoli.dir/autoli/db/redis.cc.i
+
+CMakeFiles/autoli.dir/autoli/db/redis.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/db/redis.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/db/redis.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/db/redis.cc -o CMakeFiles/autoli.dir/autoli/db/redis.cc.s
+
+CMakeFiles/autoli.dir/autoli/db/sqlite3.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/db/sqlite3.cc.o: autoli/db/sqlite3.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/autoli.dir/autoli/db/sqlite3.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/db/sqlite3.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/db/sqlite3.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/db/sqlite3.cc
+
+CMakeFiles/autoli.dir/autoli/db/sqlite3.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/db/sqlite3.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/db/sqlite3.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/db/sqlite3.cc > CMakeFiles/autoli.dir/autoli/db/sqlite3.cc.i
+
+CMakeFiles/autoli.dir/autoli/db/sqlite3.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/db/sqlite3.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/db/sqlite3.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/db/sqlite3.cc -o CMakeFiles/autoli.dir/autoli/db/sqlite3.cc.s
+
+CMakeFiles/autoli.dir/autoli/ds/bitmap.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/ds/bitmap.cc.o: autoli/ds/bitmap.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/autoli.dir/autoli/ds/bitmap.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/ds/bitmap.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/ds/bitmap.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ds/bitmap.cc
+
+CMakeFiles/autoli.dir/autoli/ds/bitmap.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/ds/bitmap.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/ds/bitmap.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ds/bitmap.cc > CMakeFiles/autoli.dir/autoli/ds/bitmap.cc.i
+
+CMakeFiles/autoli.dir/autoli/ds/bitmap.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/ds/bitmap.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/ds/bitmap.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ds/bitmap.cc -o CMakeFiles/autoli.dir/autoli/ds/bitmap.cc.s
+
+CMakeFiles/autoli.dir/autoli/ds/roaring_bitmap.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/ds/roaring_bitmap.cc.o: autoli/ds/roaring_bitmap.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/autoli.dir/autoli/ds/roaring_bitmap.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/ds/roaring_bitmap.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/ds/roaring_bitmap.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ds/roaring_bitmap.cc
+
+CMakeFiles/autoli.dir/autoli/ds/roaring_bitmap.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/ds/roaring_bitmap.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/ds/roaring_bitmap.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ds/roaring_bitmap.cc > CMakeFiles/autoli.dir/autoli/ds/roaring_bitmap.cc.i
+
+CMakeFiles/autoli.dir/autoli/ds/roaring_bitmap.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/ds/roaring_bitmap.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/ds/roaring_bitmap.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ds/roaring_bitmap.cc -o CMakeFiles/autoli.dir/autoli/ds/roaring_bitmap.cc.s
+
+CMakeFiles/autoli.dir/autoli/ds/roaring.c.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/ds/roaring.c.o: autoli/ds/roaring.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/autoli.dir/autoli/ds/roaring.c.o"
+	/usr/bin/cc $(C_DEFINES) -D__FILE__=\"autoli/ds/roaring.c\" $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/autoli.dir/autoli/ds/roaring.c.o   -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ds/roaring.c
+
+CMakeFiles/autoli.dir/autoli/ds/roaring.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/autoli.dir/autoli/ds/roaring.c.i"
+	/usr/bin/cc $(C_DEFINES) -D__FILE__=\"autoli/ds/roaring.c\" $(C_INCLUDES) $(C_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ds/roaring.c > CMakeFiles/autoli.dir/autoli/ds/roaring.c.i
+
+CMakeFiles/autoli.dir/autoli/ds/roaring.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/autoli.dir/autoli/ds/roaring.c.s"
+	/usr/bin/cc $(C_DEFINES) -D__FILE__=\"autoli/ds/roaring.c\" $(C_INCLUDES) $(C_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ds/roaring.c -o CMakeFiles/autoli.dir/autoli/ds/roaring.c.s
+
+CMakeFiles/autoli.dir/autoli/ds/util.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/ds/util.cc.o: autoli/ds/util.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/autoli.dir/autoli/ds/util.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/ds/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/ds/util.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ds/util.cc
+
+CMakeFiles/autoli.dir/autoli/ds/util.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/ds/util.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/ds/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ds/util.cc > CMakeFiles/autoli.dir/autoli/ds/util.cc.i
+
+CMakeFiles/autoli.dir/autoli/ds/util.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/ds/util.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/ds/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ds/util.cc -o CMakeFiles/autoli.dir/autoli/ds/util.cc.s
+
+CMakeFiles/autoli.dir/autoli/email/email.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/email/email.cc.o: autoli/email/email.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/autoli.dir/autoli/email/email.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/email/email.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/email/email.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/email/email.cc
+
+CMakeFiles/autoli.dir/autoli/email/email.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/email/email.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/email/email.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/email/email.cc > CMakeFiles/autoli.dir/autoli/email/email.cc.i
+
+CMakeFiles/autoli.dir/autoli/email/email.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/email/email.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/email/email.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/email/email.cc -o CMakeFiles/autoli.dir/autoli/email/email.cc.s
+
+CMakeFiles/autoli.dir/autoli/email/smtp.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/email/smtp.cc.o: autoli/email/smtp.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/autoli.dir/autoli/email/smtp.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/email/smtp.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/email/smtp.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/email/smtp.cc
+
+CMakeFiles/autoli.dir/autoli/email/smtp.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/email/smtp.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/email/smtp.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/email/smtp.cc > CMakeFiles/autoli.dir/autoli/email/smtp.cc.i
+
+CMakeFiles/autoli.dir/autoli/email/smtp.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/email/smtp.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/email/smtp.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/email/smtp.cc -o CMakeFiles/autoli.dir/autoli/email/smtp.cc.s
+
+CMakeFiles/autoli.dir/autoli/env.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/env.cc.o: autoli/env.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/autoli.dir/autoli/env.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/env.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/env.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/env.cc
+
+CMakeFiles/autoli.dir/autoli/env.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/env.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/env.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/env.cc > CMakeFiles/autoli.dir/autoli/env.cc.i
+
+CMakeFiles/autoli.dir/autoli/env.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/env.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/env.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/env.cc -o CMakeFiles/autoli.dir/autoli/env.cc.s
+
+CMakeFiles/autoli.dir/autoli/daemon.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/daemon.cc.o: autoli/daemon.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/autoli.dir/autoli/daemon.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/daemon.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/daemon.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/daemon.cc
+
+CMakeFiles/autoli.dir/autoli/daemon.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/daemon.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/daemon.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/daemon.cc > CMakeFiles/autoli.dir/autoli/daemon.cc.i
+
+CMakeFiles/autoli.dir/autoli/daemon.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/daemon.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/daemon.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/daemon.cc -o CMakeFiles/autoli.dir/autoli/daemon.cc.s
+
+CMakeFiles/autoli.dir/autoli/fd_manager.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/fd_manager.cc.o: autoli/fd_manager.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/autoli.dir/autoli/fd_manager.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/fd_manager.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/fd_manager.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/fd_manager.cc
+
+CMakeFiles/autoli.dir/autoli/fd_manager.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/fd_manager.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/fd_manager.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/fd_manager.cc > CMakeFiles/autoli.dir/autoli/fd_manager.cc.i
+
+CMakeFiles/autoli.dir/autoli/fd_manager.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/fd_manager.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/fd_manager.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/fd_manager.cc -o CMakeFiles/autoli.dir/autoli/fd_manager.cc.s
+
+CMakeFiles/autoli.dir/autoli/fiber.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/fiber.cc.o: autoli/fiber.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/autoli.dir/autoli/fiber.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/fiber.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/fiber.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/fiber.cc
+
+CMakeFiles/autoli.dir/autoli/fiber.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/fiber.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/fiber.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/fiber.cc > CMakeFiles/autoli.dir/autoli/fiber.cc.i
+
+CMakeFiles/autoli.dir/autoli/fiber.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/fiber.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/fiber.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/fiber.cc -o CMakeFiles/autoli.dir/autoli/fiber.cc.s
 
 CMakeFiles/autoli.dir/autoli/http/http.cc.o: CMakeFiles/autoli.dir/flags.make
 CMakeFiles/autoli.dir/autoli/http/http.cc.o: autoli/http/http.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/autoli.dir/autoli/http/http.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/autoli.dir/autoli/http/http.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/http.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/http.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http.cc
 
 CMakeFiles/autoli.dir/autoli/http/http.cc.i: cmake_force
@@ -112,9 +313,22 @@ CMakeFiles/autoli.dir/autoli/http/http.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/http.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/http.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http.cc -o CMakeFiles/autoli.dir/autoli/http/http.cc.s
 
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/http/http_connection.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/http_connection.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_connection.cc
+
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/http/http_connection.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/http_connection.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_connection.cc > CMakeFiles/autoli.dir/autoli/http/http_connection.cc.i
+
+CMakeFiles/autoli.dir/autoli/http/http_connection.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/http_connection.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/http_connection.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_connection.cc -o CMakeFiles/autoli.dir/autoli/http/http_connection.cc.s
+
 CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o: CMakeFiles/autoli.dir/flags.make
 CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o: autoli/http/http_parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/http_parser.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_parser.cc
 
 CMakeFiles/autoli.dir/autoli/http/http_parser.cc.i: cmake_force
@@ -125,35 +339,9 @@ CMakeFiles/autoli.dir/autoli/http/http_parser.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/http_parser.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/http_parser.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_parser.cc -o CMakeFiles/autoli.dir/autoli/http/http_parser.cc.s
 
-CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o: CMakeFiles/autoli.dir/flags.make
-CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o: autoli/http/http11_parser.rl.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/http11_parser.rl.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_parser.rl.cc
-
-CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/http11_parser.rl.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_parser.rl.cc > CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.i
-
-CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/http11_parser.rl.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_parser.rl.cc -o CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.s
-
-CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o: CMakeFiles/autoli.dir/flags.make
-CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o: autoli/http/httpclient_parser.rl.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/httpclient_parser.rl.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/httpclient_parser.rl.cc
-
-CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/httpclient_parser.rl.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/httpclient_parser.rl.cc > CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.i
-
-CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/httpclient_parser.rl.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/httpclient_parser.rl.cc -o CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.s
-
 CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: CMakeFiles/autoli.dir/flags.make
 CMakeFiles/autoli.dir/autoli/http/http_session.cc.o: autoli/http/http_session.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/autoli.dir/autoli/http/http_session.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/autoli.dir/autoli/http/http_session.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/http_session.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/http_session.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_session.cc
 
 CMakeFiles/autoli.dir/autoli/http/http_session.cc.i: cmake_force
@@ -166,7 +354,7 @@ CMakeFiles/autoli.dir/autoli/http/http_session.cc.s: cmake_force
 
 CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: CMakeFiles/autoli.dir/flags.make
 CMakeFiles/autoli.dir/autoli/http/http_server.cc.o: autoli/http/http_server.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/autoli.dir/autoli/http/http_server.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/autoli.dir/autoli/http/http_server.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/http_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/http_server.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_server.cc
 
 CMakeFiles/autoli.dir/autoli/http/http_server.cc.i: cmake_force
@@ -179,7 +367,7 @@ CMakeFiles/autoli.dir/autoli/http/http_server.cc.s: cmake_force
 
 CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: CMakeFiles/autoli.dir/flags.make
 CMakeFiles/autoli.dir/autoli/http/servlet.cc.o: autoli/http/servlet.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/autoli.dir/autoli/http/servlet.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/autoli.dir/autoli/http/servlet.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/servlet.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/servlet.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/servlet.cc
 
 CMakeFiles/autoli.dir/autoli/http/servlet.cc.i: cmake_force
@@ -190,48 +378,100 @@ CMakeFiles/autoli.dir/autoli/http/servlet.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/servlet.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/servlet.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/servlet.cc -o CMakeFiles/autoli.dir/autoli/http/servlet.cc.s
 
-CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: CMakeFiles/autoli.dir/flags.make
-CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o: autoli/http/http_connection.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/http_connection.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_connection.cc
+CMakeFiles/autoli.dir/autoli/http/servlets/config_servlet.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/http/servlets/config_servlet.cc.o: autoli/http/servlets/config_servlet.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/autoli.dir/autoli/http/servlets/config_servlet.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/servlets/config_servlet.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/servlets/config_servlet.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/servlets/config_servlet.cc
 
-CMakeFiles/autoli.dir/autoli/http/http_connection.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/http/http_connection.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/http_connection.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_connection.cc > CMakeFiles/autoli.dir/autoli/http/http_connection.cc.i
+CMakeFiles/autoli.dir/autoli/http/servlets/config_servlet.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/http/servlets/config_servlet.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/servlets/config_servlet.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/servlets/config_servlet.cc > CMakeFiles/autoli.dir/autoli/http/servlets/config_servlet.cc.i
 
-CMakeFiles/autoli.dir/autoli/http/http_connection.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/http_connection.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/http_connection.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http_connection.cc -o CMakeFiles/autoli.dir/autoli/http/http_connection.cc.s
+CMakeFiles/autoli.dir/autoli/http/servlets/config_servlet.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/servlets/config_servlet.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/servlets/config_servlet.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/servlets/config_servlet.cc -o CMakeFiles/autoli.dir/autoli/http/servlets/config_servlet.cc.s
 
-CMakeFiles/autoli.dir/autoli/iomanager.cc.o: CMakeFiles/autoli.dir/flags.make
-CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/iomanager.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/autoli.dir/autoli/iomanager.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/iomanager.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/iomanager.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/iomanager.cc
+CMakeFiles/autoli.dir/autoli/http/servlets/status_servlet.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/http/servlets/status_servlet.cc.o: autoli/http/servlets/status_servlet.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/autoli.dir/autoli/http/servlets/status_servlet.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/servlets/status_servlet.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/servlets/status_servlet.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/servlets/status_servlet.cc
 
-CMakeFiles/autoli.dir/autoli/iomanager.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/iomanager.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/iomanager.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/iomanager.cc > CMakeFiles/autoli.dir/autoli/iomanager.cc.i
+CMakeFiles/autoli.dir/autoli/http/servlets/status_servlet.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/http/servlets/status_servlet.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/servlets/status_servlet.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/servlets/status_servlet.cc > CMakeFiles/autoli.dir/autoli/http/servlets/status_servlet.cc.i
 
-CMakeFiles/autoli.dir/autoli/iomanager.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/iomanager.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/iomanager.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/iomanager.cc -o CMakeFiles/autoli.dir/autoli/iomanager.cc.s
+CMakeFiles/autoli.dir/autoli/http/servlets/status_servlet.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/servlets/status_servlet.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/servlets/status_servlet.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/servlets/status_servlet.cc -o CMakeFiles/autoli.dir/autoli/http/servlets/status_servlet.cc.s
 
-CMakeFiles/autoli.dir/autoli/util.cc.o: CMakeFiles/autoli.dir/flags.make
-CMakeFiles/autoli.dir/autoli/util.cc.o: autoli/util.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/autoli.dir/autoli/util.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/util.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util.cc
+CMakeFiles/autoli.dir/autoli/http/session_data.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/http/session_data.cc.o: autoli/http/session_data.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/autoli.dir/autoli/http/session_data.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/session_data.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/session_data.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/session_data.cc
 
-CMakeFiles/autoli.dir/autoli/util.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/util.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util.cc > CMakeFiles/autoli.dir/autoli/util.cc.i
+CMakeFiles/autoli.dir/autoli/http/session_data.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/http/session_data.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/session_data.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/session_data.cc > CMakeFiles/autoli.dir/autoli/http/session_data.cc.i
 
-CMakeFiles/autoli.dir/autoli/util.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/util.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util.cc -o CMakeFiles/autoli.dir/autoli/util.cc.s
+CMakeFiles/autoli.dir/autoli/http/session_data.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/session_data.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/session_data.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/session_data.cc -o CMakeFiles/autoli.dir/autoli/http/session_data.cc.s
+
+CMakeFiles/autoli.dir/autoli/http/ws_connection.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/http/ws_connection.cc.o: autoli/http/ws_connection.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/autoli.dir/autoli/http/ws_connection.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/ws_connection.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/ws_connection.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/ws_connection.cc
+
+CMakeFiles/autoli.dir/autoli/http/ws_connection.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/http/ws_connection.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/ws_connection.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/ws_connection.cc > CMakeFiles/autoli.dir/autoli/http/ws_connection.cc.i
+
+CMakeFiles/autoli.dir/autoli/http/ws_connection.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/ws_connection.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/ws_connection.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/ws_connection.cc -o CMakeFiles/autoli.dir/autoli/http/ws_connection.cc.s
+
+CMakeFiles/autoli.dir/autoli/http/ws_session.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/http/ws_session.cc.o: autoli/http/ws_session.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/autoli.dir/autoli/http/ws_session.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/ws_session.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/ws_session.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/ws_session.cc
+
+CMakeFiles/autoli.dir/autoli/http/ws_session.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/http/ws_session.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/ws_session.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/ws_session.cc > CMakeFiles/autoli.dir/autoli/http/ws_session.cc.i
+
+CMakeFiles/autoli.dir/autoli/http/ws_session.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/ws_session.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/ws_session.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/ws_session.cc -o CMakeFiles/autoli.dir/autoli/http/ws_session.cc.s
+
+CMakeFiles/autoli.dir/autoli/http/ws_server.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/http/ws_server.cc.o: autoli/http/ws_server.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/autoli.dir/autoli/http/ws_server.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/ws_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/ws_server.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/ws_server.cc
+
+CMakeFiles/autoli.dir/autoli/http/ws_server.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/http/ws_server.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/ws_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/ws_server.cc > CMakeFiles/autoli.dir/autoli/http/ws_server.cc.i
+
+CMakeFiles/autoli.dir/autoli/http/ws_server.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/ws_server.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/ws_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/ws_server.cc -o CMakeFiles/autoli.dir/autoli/http/ws_server.cc.s
+
+CMakeFiles/autoli.dir/autoli/http/ws_servlet.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/http/ws_servlet.cc.o: autoli/http/ws_servlet.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/autoli.dir/autoli/http/ws_servlet.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/ws_servlet.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/ws_servlet.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/ws_servlet.cc
+
+CMakeFiles/autoli.dir/autoli/http/ws_servlet.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/http/ws_servlet.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/ws_servlet.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/ws_servlet.cc > CMakeFiles/autoli.dir/autoli/http/ws_servlet.cc.i
+
+CMakeFiles/autoli.dir/autoli/http/ws_servlet.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/ws_servlet.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/ws_servlet.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/ws_servlet.cc -o CMakeFiles/autoli.dir/autoli/http/ws_servlet.cc.s
 
 CMakeFiles/autoli.dir/autoli/hook.cc.o: CMakeFiles/autoli.dir/flags.make
 CMakeFiles/autoli.dir/autoli/hook.cc.o: autoli/hook.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/autoli.dir/autoli/hook.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/autoli.dir/autoli/hook.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/hook.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/hook.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/hook.cc
 
 CMakeFiles/autoli.dir/autoli/hook.cc.i: cmake_force
@@ -242,35 +482,61 @@ CMakeFiles/autoli.dir/autoli/hook.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/hook.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/hook.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/hook.cc -o CMakeFiles/autoli.dir/autoli/hook.cc.s
 
-CMakeFiles/autoli.dir/autoli/config.cc.o: CMakeFiles/autoli.dir/flags.make
-CMakeFiles/autoli.dir/autoli/config.cc.o: autoli/config.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/autoli.dir/autoli/config.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/config.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/config.cc
+CMakeFiles/autoli.dir/autoli/iomanager.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/iomanager.cc.o: autoli/iomanager.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/autoli.dir/autoli/iomanager.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/iomanager.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/iomanager.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/iomanager.cc
 
-CMakeFiles/autoli.dir/autoli/config.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/config.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/config.cc > CMakeFiles/autoli.dir/autoli/config.cc.i
+CMakeFiles/autoli.dir/autoli/iomanager.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/iomanager.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/iomanager.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/iomanager.cc > CMakeFiles/autoli.dir/autoli/iomanager.cc.i
 
-CMakeFiles/autoli.dir/autoli/config.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/config.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/config.cc -o CMakeFiles/autoli.dir/autoli/config.cc.s
+CMakeFiles/autoli.dir/autoli/iomanager.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/iomanager.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/iomanager.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/iomanager.cc -o CMakeFiles/autoli.dir/autoli/iomanager.cc.s
 
-CMakeFiles/autoli.dir/autoli/thread.cc.o: CMakeFiles/autoli.dir/flags.make
-CMakeFiles/autoli.dir/autoli/thread.cc.o: autoli/thread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/autoli.dir/autoli/thread.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/thread.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/thread.cc
+CMakeFiles/autoli.dir/autoli/library.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/library.cc.o: autoli/library.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/autoli.dir/autoli/library.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/library.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/library.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/library.cc
 
-CMakeFiles/autoli.dir/autoli/thread.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/thread.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/thread.cc > CMakeFiles/autoli.dir/autoli/thread.cc.i
+CMakeFiles/autoli.dir/autoli/library.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/library.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/library.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/library.cc > CMakeFiles/autoli.dir/autoli/library.cc.i
 
-CMakeFiles/autoli.dir/autoli/thread.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/thread.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/thread.cc -o CMakeFiles/autoli.dir/autoli/thread.cc.s
+CMakeFiles/autoli.dir/autoli/library.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/library.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/library.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/library.cc -o CMakeFiles/autoli.dir/autoli/library.cc.s
+
+CMakeFiles/autoli.dir/autoli/log.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/log.cc.o: autoli/log.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/autoli.dir/autoli/log.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/log.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/log.cc
+
+CMakeFiles/autoli.dir/autoli/log.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/log.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/log.cc > CMakeFiles/autoli.dir/autoli/log.cc.i
+
+CMakeFiles/autoli.dir/autoli/log.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/log.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/log.cc -o CMakeFiles/autoli.dir/autoli/log.cc.s
+
+CMakeFiles/autoli.dir/autoli/module.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/module.cc.o: autoli/module.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/autoli.dir/autoli/module.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/module.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/module.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/module.cc
+
+CMakeFiles/autoli.dir/autoli/module.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/module.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/module.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/module.cc > CMakeFiles/autoli.dir/autoli/module.cc.i
+
+CMakeFiles/autoli.dir/autoli/module.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/module.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/module.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/module.cc -o CMakeFiles/autoli.dir/autoli/module.cc.s
 
 CMakeFiles/autoli.dir/autoli/mutex.cc.o: CMakeFiles/autoli.dir/flags.make
 CMakeFiles/autoli.dir/autoli/mutex.cc.o: autoli/mutex.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/autoli.dir/autoli/mutex.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/autoli.dir/autoli/mutex.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/mutex.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/mutex.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/mutex.cc
 
 CMakeFiles/autoli.dir/autoli/mutex.cc.i: cmake_force
@@ -281,22 +547,100 @@ CMakeFiles/autoli.dir/autoli/mutex.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/mutex.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/mutex.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/mutex.cc -o CMakeFiles/autoli.dir/autoli/mutex.cc.s
 
-CMakeFiles/autoli.dir/autoli/fiber.cc.o: CMakeFiles/autoli.dir/flags.make
-CMakeFiles/autoli.dir/autoli/fiber.cc.o: autoli/fiber.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/autoli.dir/autoli/fiber.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/fiber.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/fiber.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/fiber.cc
+CMakeFiles/autoli.dir/autoli/ns/name_server_module.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/ns/name_server_module.cc.o: autoli/ns/name_server_module.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/autoli.dir/autoli/ns/name_server_module.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/ns/name_server_module.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/ns/name_server_module.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ns/name_server_module.cc
 
-CMakeFiles/autoli.dir/autoli/fiber.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/fiber.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/fiber.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/fiber.cc > CMakeFiles/autoli.dir/autoli/fiber.cc.i
+CMakeFiles/autoli.dir/autoli/ns/name_server_module.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/ns/name_server_module.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/ns/name_server_module.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ns/name_server_module.cc > CMakeFiles/autoli.dir/autoli/ns/name_server_module.cc.i
 
-CMakeFiles/autoli.dir/autoli/fiber.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/fiber.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/fiber.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/fiber.cc -o CMakeFiles/autoli.dir/autoli/fiber.cc.s
+CMakeFiles/autoli.dir/autoli/ns/name_server_module.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/ns/name_server_module.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/ns/name_server_module.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ns/name_server_module.cc -o CMakeFiles/autoli.dir/autoli/ns/name_server_module.cc.s
+
+CMakeFiles/autoli.dir/autoli/ns/ns_client.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/ns/ns_client.cc.o: autoli/ns/ns_client.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/autoli.dir/autoli/ns/ns_client.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/ns/ns_client.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/ns/ns_client.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ns/ns_client.cc
+
+CMakeFiles/autoli.dir/autoli/ns/ns_client.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/ns/ns_client.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/ns/ns_client.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ns/ns_client.cc > CMakeFiles/autoli.dir/autoli/ns/ns_client.cc.i
+
+CMakeFiles/autoli.dir/autoli/ns/ns_client.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/ns/ns_client.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/ns/ns_client.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ns/ns_client.cc -o CMakeFiles/autoli.dir/autoli/ns/ns_client.cc.s
+
+CMakeFiles/autoli.dir/autoli/ns/ns_protocol.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/ns/ns_protocol.cc.o: autoli/ns/ns_protocol.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/autoli.dir/autoli/ns/ns_protocol.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/ns/ns_protocol.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/ns/ns_protocol.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ns/ns_protocol.cc
+
+CMakeFiles/autoli.dir/autoli/ns/ns_protocol.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/ns/ns_protocol.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/ns/ns_protocol.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ns/ns_protocol.cc > CMakeFiles/autoli.dir/autoli/ns/ns_protocol.cc.i
+
+CMakeFiles/autoli.dir/autoli/ns/ns_protocol.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/ns/ns_protocol.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/ns/ns_protocol.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ns/ns_protocol.cc -o CMakeFiles/autoli.dir/autoli/ns/ns_protocol.cc.s
+
+CMakeFiles/autoli.dir/autoli/protocol.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/protocol.cc.o: autoli/protocol.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/autoli.dir/autoli/protocol.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/protocol.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/protocol.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/protocol.cc
+
+CMakeFiles/autoli.dir/autoli/protocol.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/protocol.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/protocol.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/protocol.cc > CMakeFiles/autoli.dir/autoli/protocol.cc.i
+
+CMakeFiles/autoli.dir/autoli/protocol.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/protocol.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/protocol.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/protocol.cc -o CMakeFiles/autoli.dir/autoli/protocol.cc.s
+
+CMakeFiles/autoli.dir/autoli/rock/rock_protocol.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/rock/rock_protocol.cc.o: autoli/rock/rock_protocol.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/autoli.dir/autoli/rock/rock_protocol.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/rock/rock_protocol.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/rock/rock_protocol.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/rock/rock_protocol.cc
+
+CMakeFiles/autoli.dir/autoli/rock/rock_protocol.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/rock/rock_protocol.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/rock/rock_protocol.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/rock/rock_protocol.cc > CMakeFiles/autoli.dir/autoli/rock/rock_protocol.cc.i
+
+CMakeFiles/autoli.dir/autoli/rock/rock_protocol.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/rock/rock_protocol.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/rock/rock_protocol.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/rock/rock_protocol.cc -o CMakeFiles/autoli.dir/autoli/rock/rock_protocol.cc.s
+
+CMakeFiles/autoli.dir/autoli/rock/rock_server.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/rock/rock_server.cc.o: autoli/rock/rock_server.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/autoli.dir/autoli/rock/rock_server.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/rock/rock_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/rock/rock_server.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/rock/rock_server.cc
+
+CMakeFiles/autoli.dir/autoli/rock/rock_server.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/rock/rock_server.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/rock/rock_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/rock/rock_server.cc > CMakeFiles/autoli.dir/autoli/rock/rock_server.cc.i
+
+CMakeFiles/autoli.dir/autoli/rock/rock_server.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/rock/rock_server.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/rock/rock_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/rock/rock_server.cc -o CMakeFiles/autoli.dir/autoli/rock/rock_server.cc.s
+
+CMakeFiles/autoli.dir/autoli/rock/rock_stream.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/rock/rock_stream.cc.o: autoli/rock/rock_stream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/autoli.dir/autoli/rock/rock_stream.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/rock/rock_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/rock/rock_stream.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/rock/rock_stream.cc
+
+CMakeFiles/autoli.dir/autoli/rock/rock_stream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/rock/rock_stream.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/rock/rock_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/rock/rock_stream.cc > CMakeFiles/autoli.dir/autoli/rock/rock_stream.cc.i
+
+CMakeFiles/autoli.dir/autoli/rock/rock_stream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/rock/rock_stream.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/rock/rock_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/rock/rock_stream.cc -o CMakeFiles/autoli.dir/autoli/rock/rock_stream.cc.s
 
 CMakeFiles/autoli.dir/autoli/scheduler.cc.o: CMakeFiles/autoli.dir/flags.make
 CMakeFiles/autoli.dir/autoli/scheduler.cc.o: autoli/scheduler.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/autoli.dir/autoli/scheduler.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/autoli.dir/autoli/scheduler.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/scheduler.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/scheduler.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/scheduler.cc
 
 CMakeFiles/autoli.dir/autoli/scheduler.cc.i: cmake_force
@@ -307,74 +651,9 @@ CMakeFiles/autoli.dir/autoli/scheduler.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/scheduler.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/scheduler.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/scheduler.cc -o CMakeFiles/autoli.dir/autoli/scheduler.cc.s
 
-CMakeFiles/autoli.dir/autoli/stream.cc.o: CMakeFiles/autoli.dir/flags.make
-CMakeFiles/autoli.dir/autoli/stream.cc.o: autoli/stream.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/autoli.dir/autoli/stream.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/stream.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/stream.cc
-
-CMakeFiles/autoli.dir/autoli/stream.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/stream.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/stream.cc > CMakeFiles/autoli.dir/autoli/stream.cc.i
-
-CMakeFiles/autoli.dir/autoli/stream.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/stream.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/stream.cc -o CMakeFiles/autoli.dir/autoli/stream.cc.s
-
-CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: CMakeFiles/autoli.dir/flags.make
-CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/streams/socket_stream.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/streams/socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/socket_stream.cc
-
-CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/streams/socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/socket_stream.cc > CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.i
-
-CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/streams/socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/socket_stream.cc -o CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.s
-
-CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: CMakeFiles/autoli.dir/flags.make
-CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: autoli/streams/zlib_stream.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/streams/zlib_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/zlib_stream.cc
-
-CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/streams/zlib_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/zlib_stream.cc > CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.i
-
-CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/streams/zlib_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/zlib_stream.cc -o CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.s
-
-CMakeFiles/autoli.dir/autoli/timer.cc.o: CMakeFiles/autoli.dir/flags.make
-CMakeFiles/autoli.dir/autoli/timer.cc.o: autoli/timer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/autoli.dir/autoli/timer.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/timer.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/timer.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/timer.cc
-
-CMakeFiles/autoli.dir/autoli/timer.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/timer.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/timer.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/timer.cc > CMakeFiles/autoli.dir/autoli/timer.cc.i
-
-CMakeFiles/autoli.dir/autoli/timer.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/timer.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/timer.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/timer.cc -o CMakeFiles/autoli.dir/autoli/timer.cc.s
-
-CMakeFiles/autoli.dir/autoli/fd_manager.cc.o: CMakeFiles/autoli.dir/flags.make
-CMakeFiles/autoli.dir/autoli/fd_manager.cc.o: autoli/fd_manager.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/autoli.dir/autoli/fd_manager.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/fd_manager.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/fd_manager.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/fd_manager.cc
-
-CMakeFiles/autoli.dir/autoli/fd_manager.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/fd_manager.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/fd_manager.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/fd_manager.cc > CMakeFiles/autoli.dir/autoli/fd_manager.cc.i
-
-CMakeFiles/autoli.dir/autoli/fd_manager.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/fd_manager.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/fd_manager.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/fd_manager.cc -o CMakeFiles/autoli.dir/autoli/fd_manager.cc.s
-
 CMakeFiles/autoli.dir/autoli/socket.cc.o: CMakeFiles/autoli.dir/flags.make
 CMakeFiles/autoli.dir/autoli/socket.cc.o: autoli/socket.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/autoli.dir/autoli/socket.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/autoli.dir/autoli/socket.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/socket.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/socket.cc
 
 CMakeFiles/autoli.dir/autoli/socket.cc.i: cmake_force
@@ -385,9 +664,87 @@ CMakeFiles/autoli.dir/autoli/socket.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/socket.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/socket.cc -o CMakeFiles/autoli.dir/autoli/socket.cc.s
 
+CMakeFiles/autoli.dir/autoli/stream.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/stream.cc.o: autoli/stream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/autoli.dir/autoli/stream.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/stream.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/stream.cc
+
+CMakeFiles/autoli.dir/autoli/stream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/stream.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/stream.cc > CMakeFiles/autoli.dir/autoli/stream.cc.i
+
+CMakeFiles/autoli.dir/autoli/stream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/stream.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/stream.cc -o CMakeFiles/autoli.dir/autoli/stream.cc.s
+
+CMakeFiles/autoli.dir/autoli/streams/async_socket_stream.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/streams/async_socket_stream.cc.o: autoli/streams/async_socket_stream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/autoli.dir/autoli/streams/async_socket_stream.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/streams/async_socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/streams/async_socket_stream.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/async_socket_stream.cc
+
+CMakeFiles/autoli.dir/autoli/streams/async_socket_stream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/streams/async_socket_stream.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/streams/async_socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/async_socket_stream.cc > CMakeFiles/autoli.dir/autoli/streams/async_socket_stream.cc.i
+
+CMakeFiles/autoli.dir/autoli/streams/async_socket_stream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/streams/async_socket_stream.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/streams/async_socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/async_socket_stream.cc -o CMakeFiles/autoli.dir/autoli/streams/async_socket_stream.cc.s
+
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o: autoli/streams/socket_stream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/streams/socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/socket_stream.cc
+
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/streams/socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/socket_stream.cc > CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.i
+
+CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/streams/socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/socket_stream.cc -o CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.s
+
+CMakeFiles/autoli.dir/autoli/streams/load_balance.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/streams/load_balance.cc.o: autoli/streams/load_balance.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/autoli.dir/autoli/streams/load_balance.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/streams/load_balance.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/streams/load_balance.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/load_balance.cc
+
+CMakeFiles/autoli.dir/autoli/streams/load_balance.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/streams/load_balance.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/streams/load_balance.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/load_balance.cc > CMakeFiles/autoli.dir/autoli/streams/load_balance.cc.i
+
+CMakeFiles/autoli.dir/autoli/streams/load_balance.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/streams/load_balance.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/streams/load_balance.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/load_balance.cc -o CMakeFiles/autoli.dir/autoli/streams/load_balance.cc.s
+
+CMakeFiles/autoli.dir/autoli/streams/service_discovery.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/streams/service_discovery.cc.o: autoli/streams/service_discovery.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/autoli.dir/autoli/streams/service_discovery.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/streams/service_discovery.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/streams/service_discovery.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/service_discovery.cc
+
+CMakeFiles/autoli.dir/autoli/streams/service_discovery.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/streams/service_discovery.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/streams/service_discovery.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/service_discovery.cc > CMakeFiles/autoli.dir/autoli/streams/service_discovery.cc.i
+
+CMakeFiles/autoli.dir/autoli/streams/service_discovery.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/streams/service_discovery.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/streams/service_discovery.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/service_discovery.cc -o CMakeFiles/autoli.dir/autoli/streams/service_discovery.cc.s
+
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o: autoli/streams/zlib_stream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/streams/zlib_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/zlib_stream.cc
+
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/streams/zlib_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/zlib_stream.cc > CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.i
+
+CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/streams/zlib_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/streams/zlib_stream.cc -o CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.s
+
 CMakeFiles/autoli.dir/autoli/tcp_server.cc.o: CMakeFiles/autoli.dir/flags.make
 CMakeFiles/autoli.dir/autoli/tcp_server.cc.o: autoli/tcp_server.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/autoli.dir/autoli/tcp_server.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/autoli.dir/autoli/tcp_server.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/tcp_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/tcp_server.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/tcp_server.cc
 
 CMakeFiles/autoli.dir/autoli/tcp_server.cc.i: cmake_force
@@ -398,9 +755,152 @@ CMakeFiles/autoli.dir/autoli/tcp_server.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/tcp_server.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/tcp_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/tcp_server.cc -o CMakeFiles/autoli.dir/autoli/tcp_server.cc.s
 
+CMakeFiles/autoli.dir/autoli/timer.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/timer.cc.o: autoli/timer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/autoli.dir/autoli/timer.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/timer.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/timer.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/timer.cc
+
+CMakeFiles/autoli.dir/autoli/timer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/timer.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/timer.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/timer.cc > CMakeFiles/autoli.dir/autoli/timer.cc.i
+
+CMakeFiles/autoli.dir/autoli/timer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/timer.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/timer.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/timer.cc -o CMakeFiles/autoli.dir/autoli/timer.cc.s
+
+CMakeFiles/autoli.dir/autoli/thread.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/thread.cc.o: autoli/thread.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/autoli.dir/autoli/thread.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/thread.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/thread.cc
+
+CMakeFiles/autoli.dir/autoli/thread.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/thread.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/thread.cc > CMakeFiles/autoli.dir/autoli/thread.cc.i
+
+CMakeFiles/autoli.dir/autoli/thread.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/thread.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/thread.cc -o CMakeFiles/autoli.dir/autoli/thread.cc.s
+
+CMakeFiles/autoli.dir/autoli/util.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/util.cc.o: autoli/util.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/autoli.dir/autoli/util.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/util.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util.cc
+
+CMakeFiles/autoli.dir/autoli/util.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/util.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util.cc > CMakeFiles/autoli.dir/autoli/util.cc.i
+
+CMakeFiles/autoli.dir/autoli/util.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/util.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util.cc -o CMakeFiles/autoli.dir/autoli/util.cc.s
+
+CMakeFiles/autoli.dir/autoli/util/crypto_util.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/util/crypto_util.cc.o: autoli/util/crypto_util.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/autoli.dir/autoli/util/crypto_util.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/util/crypto_util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/util/crypto_util.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util/crypto_util.cc
+
+CMakeFiles/autoli.dir/autoli/util/crypto_util.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/util/crypto_util.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/util/crypto_util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util/crypto_util.cc > CMakeFiles/autoli.dir/autoli/util/crypto_util.cc.i
+
+CMakeFiles/autoli.dir/autoli/util/crypto_util.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/util/crypto_util.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/util/crypto_util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util/crypto_util.cc -o CMakeFiles/autoli.dir/autoli/util/crypto_util.cc.s
+
+CMakeFiles/autoli.dir/autoli/util/json_util.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/util/json_util.cc.o: autoli/util/json_util.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/autoli.dir/autoli/util/json_util.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/util/json_util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/util/json_util.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util/json_util.cc
+
+CMakeFiles/autoli.dir/autoli/util/json_util.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/util/json_util.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/util/json_util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util/json_util.cc > CMakeFiles/autoli.dir/autoli/util/json_util.cc.i
+
+CMakeFiles/autoli.dir/autoli/util/json_util.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/util/json_util.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/util/json_util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util/json_util.cc -o CMakeFiles/autoli.dir/autoli/util/json_util.cc.s
+
+CMakeFiles/autoli.dir/autoli/util/hash_util.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/util/hash_util.cc.o: autoli/util/hash_util.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/autoli.dir/autoli/util/hash_util.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/util/hash_util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/util/hash_util.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util/hash_util.cc
+
+CMakeFiles/autoli.dir/autoli/util/hash_util.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/util/hash_util.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/util/hash_util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util/hash_util.cc > CMakeFiles/autoli.dir/autoli/util/hash_util.cc.i
+
+CMakeFiles/autoli.dir/autoli/util/hash_util.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/util/hash_util.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/util/hash_util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util/hash_util.cc -o CMakeFiles/autoli.dir/autoli/util/hash_util.cc.s
+
+CMakeFiles/autoli.dir/autoli/worker.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/worker.cc.o: autoli/worker.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/autoli.dir/autoli/worker.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/worker.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/worker.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/worker.cc
+
+CMakeFiles/autoli.dir/autoli/worker.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/worker.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/worker.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/worker.cc > CMakeFiles/autoli.dir/autoli/worker.cc.i
+
+CMakeFiles/autoli.dir/autoli/worker.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/worker.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/worker.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/worker.cc -o CMakeFiles/autoli.dir/autoli/worker.cc.s
+
+CMakeFiles/autoli.dir/autoli/application.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/application.cc.o: autoli/application.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/autoli.dir/autoli/application.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/application.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/application.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/application.cc
+
+CMakeFiles/autoli.dir/autoli/application.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/application.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/application.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/application.cc > CMakeFiles/autoli.dir/autoli/application.cc.i
+
+CMakeFiles/autoli.dir/autoli/application.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/application.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/application.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/application.cc -o CMakeFiles/autoli.dir/autoli/application.cc.s
+
+CMakeFiles/autoli.dir/autoli/zk_client.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/zk_client.cc.o: autoli/zk_client.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/autoli.dir/autoli/zk_client.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/zk_client.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/zk_client.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/zk_client.cc
+
+CMakeFiles/autoli.dir/autoli/zk_client.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/zk_client.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/zk_client.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/zk_client.cc > CMakeFiles/autoli.dir/autoli/zk_client.cc.i
+
+CMakeFiles/autoli.dir/autoli/zk_client.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/zk_client.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/zk_client.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/zk_client.cc -o CMakeFiles/autoli.dir/autoli/zk_client.cc.s
+
+CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o: autoli/http/http11_parser.rl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/http11_parser.rl.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_parser.rl.cc
+
+CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/http11_parser.rl.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_parser.rl.cc > CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.i
+
+CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/http11_parser.rl.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/http11_parser.rl.cc -o CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.s
+
+CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o: autoli/http/httpclient_parser.rl.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/http/httpclient_parser.rl.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/httpclient_parser.rl.cc
+
+CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/httpclient_parser.rl.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/httpclient_parser.rl.cc > CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.i
+
+CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/http/httpclient_parser.rl.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/http/httpclient_parser.rl.cc -o CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.s
+
 CMakeFiles/autoli.dir/autoli/uri.rl.cc.o: CMakeFiles/autoli.dir/flags.make
 CMakeFiles/autoli.dir/autoli/uri.rl.cc.o: autoli/uri.rl.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/autoli.dir/autoli/uri.rl.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/autoli.dir/autoli/uri.rl.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/uri.rl.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/uri.rl.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/uri.rl.cc
 
 CMakeFiles/autoli.dir/autoli/uri.rl.cc.i: cmake_force
@@ -411,69 +911,158 @@ CMakeFiles/autoli.dir/autoli/uri.rl.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/uri.rl.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/uri.rl.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/uri.rl.cc -o CMakeFiles/autoli.dir/autoli/uri.rl.cc.s
 
+CMakeFiles/autoli.dir/autoli/ns/ns_protobuf.pb.cc.o: CMakeFiles/autoli.dir/flags.make
+CMakeFiles/autoli.dir/autoli/ns/ns_protobuf.pb.cc.o: autoli/ns/ns_protobuf.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/autoli.dir/autoli/ns/ns_protobuf.pb.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"autoli/ns/ns_protobuf.pb.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoli.dir/autoli/ns/ns_protobuf.pb.cc.o -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ns/ns_protobuf.pb.cc
+
+CMakeFiles/autoli.dir/autoli/ns/ns_protobuf.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoli.dir/autoli/ns/ns_protobuf.pb.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/ns/ns_protobuf.pb.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ns/ns_protobuf.pb.cc > CMakeFiles/autoli.dir/autoli/ns/ns_protobuf.pb.cc.i
+
+CMakeFiles/autoli.dir/autoli/ns/ns_protobuf.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoli.dir/autoli/ns/ns_protobuf.pb.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"autoli/ns/ns_protobuf.pb.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/ns/ns_protobuf.pb.cc -o CMakeFiles/autoli.dir/autoli/ns/ns_protobuf.pb.cc.s
+
 # Object files for target autoli
 autoli_OBJECTS = \
 "CMakeFiles/autoli.dir/autoli/address.cc.o" \
 "CMakeFiles/autoli.dir/autoli/bytearray.cc.o" \
-"CMakeFiles/autoli.dir/autoli/log.cc.o" \
+"CMakeFiles/autoli.dir/autoli/config.cc.o" \
+"CMakeFiles/autoli.dir/autoli/db/fox_thread.cc.o" \
+"CMakeFiles/autoli.dir/autoli/db/mysql.cc.o" \
+"CMakeFiles/autoli.dir/autoli/db/redis.cc.o" \
+"CMakeFiles/autoli.dir/autoli/db/sqlite3.cc.o" \
+"CMakeFiles/autoli.dir/autoli/ds/bitmap.cc.o" \
+"CMakeFiles/autoli.dir/autoli/ds/roaring_bitmap.cc.o" \
+"CMakeFiles/autoli.dir/autoli/ds/roaring.c.o" \
+"CMakeFiles/autoli.dir/autoli/ds/util.cc.o" \
+"CMakeFiles/autoli.dir/autoli/email/email.cc.o" \
+"CMakeFiles/autoli.dir/autoli/email/smtp.cc.o" \
+"CMakeFiles/autoli.dir/autoli/env.cc.o" \
+"CMakeFiles/autoli.dir/autoli/daemon.cc.o" \
+"CMakeFiles/autoli.dir/autoli/fd_manager.cc.o" \
+"CMakeFiles/autoli.dir/autoli/fiber.cc.o" \
 "CMakeFiles/autoli.dir/autoli/http/http.cc.o" \
+"CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o" \
 "CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o" \
-"CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o" \
-"CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o" \
 "CMakeFiles/autoli.dir/autoli/http/http_session.cc.o" \
 "CMakeFiles/autoli.dir/autoli/http/http_server.cc.o" \
 "CMakeFiles/autoli.dir/autoli/http/servlet.cc.o" \
-"CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o" \
-"CMakeFiles/autoli.dir/autoli/iomanager.cc.o" \
-"CMakeFiles/autoli.dir/autoli/util.cc.o" \
+"CMakeFiles/autoli.dir/autoli/http/servlets/config_servlet.cc.o" \
+"CMakeFiles/autoli.dir/autoli/http/servlets/status_servlet.cc.o" \
+"CMakeFiles/autoli.dir/autoli/http/session_data.cc.o" \
+"CMakeFiles/autoli.dir/autoli/http/ws_connection.cc.o" \
+"CMakeFiles/autoli.dir/autoli/http/ws_session.cc.o" \
+"CMakeFiles/autoli.dir/autoli/http/ws_server.cc.o" \
+"CMakeFiles/autoli.dir/autoli/http/ws_servlet.cc.o" \
 "CMakeFiles/autoli.dir/autoli/hook.cc.o" \
-"CMakeFiles/autoli.dir/autoli/config.cc.o" \
-"CMakeFiles/autoli.dir/autoli/thread.cc.o" \
+"CMakeFiles/autoli.dir/autoli/iomanager.cc.o" \
+"CMakeFiles/autoli.dir/autoli/library.cc.o" \
+"CMakeFiles/autoli.dir/autoli/log.cc.o" \
+"CMakeFiles/autoli.dir/autoli/module.cc.o" \
 "CMakeFiles/autoli.dir/autoli/mutex.cc.o" \
-"CMakeFiles/autoli.dir/autoli/fiber.cc.o" \
+"CMakeFiles/autoli.dir/autoli/ns/name_server_module.cc.o" \
+"CMakeFiles/autoli.dir/autoli/ns/ns_client.cc.o" \
+"CMakeFiles/autoli.dir/autoli/ns/ns_protocol.cc.o" \
+"CMakeFiles/autoli.dir/autoli/protocol.cc.o" \
+"CMakeFiles/autoli.dir/autoli/rock/rock_protocol.cc.o" \
+"CMakeFiles/autoli.dir/autoli/rock/rock_server.cc.o" \
+"CMakeFiles/autoli.dir/autoli/rock/rock_stream.cc.o" \
 "CMakeFiles/autoli.dir/autoli/scheduler.cc.o" \
-"CMakeFiles/autoli.dir/autoli/stream.cc.o" \
-"CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o" \
-"CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o" \
-"CMakeFiles/autoli.dir/autoli/timer.cc.o" \
-"CMakeFiles/autoli.dir/autoli/fd_manager.cc.o" \
 "CMakeFiles/autoli.dir/autoli/socket.cc.o" \
+"CMakeFiles/autoli.dir/autoli/stream.cc.o" \
+"CMakeFiles/autoli.dir/autoli/streams/async_socket_stream.cc.o" \
+"CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o" \
+"CMakeFiles/autoli.dir/autoli/streams/load_balance.cc.o" \
+"CMakeFiles/autoli.dir/autoli/streams/service_discovery.cc.o" \
+"CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o" \
 "CMakeFiles/autoli.dir/autoli/tcp_server.cc.o" \
-"CMakeFiles/autoli.dir/autoli/uri.rl.cc.o"
+"CMakeFiles/autoli.dir/autoli/timer.cc.o" \
+"CMakeFiles/autoli.dir/autoli/thread.cc.o" \
+"CMakeFiles/autoli.dir/autoli/util.cc.o" \
+"CMakeFiles/autoli.dir/autoli/util/crypto_util.cc.o" \
+"CMakeFiles/autoli.dir/autoli/util/json_util.cc.o" \
+"CMakeFiles/autoli.dir/autoli/util/hash_util.cc.o" \
+"CMakeFiles/autoli.dir/autoli/worker.cc.o" \
+"CMakeFiles/autoli.dir/autoli/application.cc.o" \
+"CMakeFiles/autoli.dir/autoli/zk_client.cc.o" \
+"CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o" \
+"CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o" \
+"CMakeFiles/autoli.dir/autoli/uri.rl.cc.o" \
+"CMakeFiles/autoli.dir/autoli/ns/ns_protobuf.pb.cc.o"
 
 # External object files for target autoli
 autoli_EXTERNAL_OBJECTS =
 
 lib/libautoli.so: CMakeFiles/autoli.dir/autoli/address.cc.o
 lib/libautoli.so: CMakeFiles/autoli.dir/autoli/bytearray.cc.o
-lib/libautoli.so: CMakeFiles/autoli.dir/autoli/log.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/config.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/db/fox_thread.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/db/mysql.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/db/redis.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/db/sqlite3.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/ds/bitmap.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/ds/roaring_bitmap.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/ds/roaring.c.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/ds/util.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/email/email.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/email/smtp.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/env.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/daemon.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/fd_manager.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/fiber.cc.o
 lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/http.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o
 lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/http_parser.cc.o
-lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o
-lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o
 lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/http_session.cc.o
 lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/http_server.cc.o
 lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/servlet.cc.o
-lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/http_connection.cc.o
-lib/libautoli.so: CMakeFiles/autoli.dir/autoli/iomanager.cc.o
-lib/libautoli.so: CMakeFiles/autoli.dir/autoli/util.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/servlets/config_servlet.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/servlets/status_servlet.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/session_data.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/ws_connection.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/ws_session.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/ws_server.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/ws_servlet.cc.o
 lib/libautoli.so: CMakeFiles/autoli.dir/autoli/hook.cc.o
-lib/libautoli.so: CMakeFiles/autoli.dir/autoli/config.cc.o
-lib/libautoli.so: CMakeFiles/autoli.dir/autoli/thread.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/iomanager.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/library.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/log.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/module.cc.o
 lib/libautoli.so: CMakeFiles/autoli.dir/autoli/mutex.cc.o
-lib/libautoli.so: CMakeFiles/autoli.dir/autoli/fiber.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/ns/name_server_module.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/ns/ns_client.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/ns/ns_protocol.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/protocol.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/rock/rock_protocol.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/rock/rock_server.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/rock/rock_stream.cc.o
 lib/libautoli.so: CMakeFiles/autoli.dir/autoli/scheduler.cc.o
-lib/libautoli.so: CMakeFiles/autoli.dir/autoli/stream.cc.o
-lib/libautoli.so: CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o
-lib/libautoli.so: CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o
-lib/libautoli.so: CMakeFiles/autoli.dir/autoli/timer.cc.o
-lib/libautoli.so: CMakeFiles/autoli.dir/autoli/fd_manager.cc.o
 lib/libautoli.so: CMakeFiles/autoli.dir/autoli/socket.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/stream.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/streams/async_socket_stream.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/streams/socket_stream.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/streams/load_balance.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/streams/service_discovery.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/streams/zlib_stream.cc.o
 lib/libautoli.so: CMakeFiles/autoli.dir/autoli/tcp_server.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/timer.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/thread.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/util.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/util/crypto_util.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/util/json_util.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/util/hash_util.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/worker.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/application.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/zk_client.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/http11_parser.rl.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/http/httpclient_parser.rl.cc.o
 lib/libautoli.so: CMakeFiles/autoli.dir/autoli/uri.rl.cc.o
+lib/libautoli.so: CMakeFiles/autoli.dir/autoli/ns/ns_protobuf.pb.cc.o
 lib/libautoli.so: CMakeFiles/autoli.dir/build.make
 lib/libautoli.so: CMakeFiles/autoli.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX shared library lib/libautoli.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Linking CXX shared library lib/libautoli.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/autoli.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -485,7 +1074,10 @@ CMakeFiles/autoli.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/autoli.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/autoli.dir/clean
 
-CMakeFiles/autoli.dir/depend:
+CMakeFiles/autoli.dir/depend: autoli/http/http11_parser.rl.cc
+CMakeFiles/autoli.dir/depend: autoli/http/httpclient_parser.rl.cc
+CMakeFiles/autoli.dir/depend: autoli/uri.rl.cc
+CMakeFiles/autoli.dir/depend: autoli/ns/ns_protobuf.pb.cc
 	cd /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/autoli.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/autoli.dir/depend
 

@@ -1,4 +1,4 @@
-2021-01-04 20:44:28	[INFO]	hello system
-
-2021-01-04 20:44:28	[INFO]	hello system
-
+2021-01-30 21:59:59	LoadConfFile file=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/bin/conf/test.yml ok
+2021-01-30 21:59:59	LoadConfFile file=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/bin/conf/xx/log.yml ok
+2021-01-30 21:59:59	0x562fe88ad9c0 stopped
+2021-01-30 21:59:59	invalid address: /tmp/test.sock

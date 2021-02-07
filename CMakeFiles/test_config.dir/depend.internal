@@ -11,3 +11,6 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/thread.h
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/autoli/util.h
  /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/tests/test_config.cc
+ autoli/env.h
+ autoli/singleton.h
+ autoli/thread.h

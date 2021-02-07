@@ -1,7 +1,7 @@
 #include "../autoli/config.h"
 #include "../autoli/log.h"
 #include <yaml-cpp/yaml.h>
-//#include "sylar/env.h"
+#include "autoli/env.h"
 #include <iostream>
 
 #if 1
@@ -216,19 +216,22 @@ void test_log() {
     AUTOLI_LOG_INFO(system_log) << "hello system" << std::endl;
 }
 
+void test_loadconf() {
+    autoli::Config::LoadFromConfDir("conf");
+}
 int main(int argc, char** argv) {
     //AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT()) << g_int_value_config->getValue();
     //AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT()) << g_float_value_config->toString();
     //test_yaml();
     //test_config();
     //test_class();
-    test_log();
-    // sylar::EnvMgr::GetInstance()->init(argc, argv);
-    // test_loadconf();
-    // std::cout << " ==== " << std::endl;
-    // sleep(10);
-    // test_loadconf();
-    // return 0;
+    //test_log();
+    autoli::EnvMgr::GetInstance()->init(argc, argv);
+    test_loadconf();
+    std::cout << " ==== " << std::endl;
+    //sleep(10);
+    test_loadconf();
+    return 0;
     autoli::Config::Visit([](autoli::ConfigVarBase::ptr var) {
         AUTOLI_LOG_INFO(AUTOLI_LOG_ROOT()) << "name=" << var->getName()
                     << " description=" << var->getDescription()

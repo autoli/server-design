@@ -83,7 +83,10 @@ test_util_EXTERNAL_OBJECTS =
 bin/test_util: CMakeFiles/test_util.dir/tests/test_util.cc.o
 bin/test_util: CMakeFiles/test_util.dir/build.make
 bin/test_util: lib/libautoli.so
-bin/test_util: /usr/local/lib/libyaml-cpp.so
+bin/test_util: /usr/lib/x86_64-linux-gnu/libz.so
+bin/test_util: /usr/lib/x86_64-linux-gnu/libssl.so
+bin/test_util: /usr/lib/x86_64-linux-gnu/libcrypto.so
+bin/test_util: /usr/local/lib/libprotobuf.so
 bin/test_util: CMakeFiles/test_util.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bin/test_util"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_util.dir/link.txt --verbose=$(VERBOSE)

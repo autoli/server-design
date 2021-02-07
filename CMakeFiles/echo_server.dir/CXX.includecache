@@ -231,6 +231,12 @@ string
 -
 iomanip
 -
+yaml-cpp/yaml.h
+-
+iostream
+-
+boost/lexical_cast.hpp
+-
 
 /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/examples/echo_server.cc
 ../autoli/tcp_server.h

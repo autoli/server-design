@@ -10,4 +10,7 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: autoli/singleton.h
 CMakeFiles/test_config.dir/tests/test_config.cc.o: autoli/thread.h
 CMakeFiles/test_config.dir/tests/test_config.cc.o: autoli/util.h
 CMakeFiles/test_config.dir/tests/test_config.cc.o: tests/test_config.cc
+CMakeFiles/test_config.dir/tests/test_config.cc.o: autoli/env.h
+CMakeFiles/test_config.dir/tests/test_config.cc.o: autoli/singleton.h
+CMakeFiles/test_config.dir/tests/test_config.cc.o: autoli/thread.h
 

@@ -3239,3 +3239,35 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_48b40/fast && make[1]: 进入目录“/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_48b40.dir/build.make CMakeFiles/cmTC_48b40.dir/build
+make[2]: 进入目录“/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_48b40.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -rdynamic -O3 -fPIC -ggdb -std=c11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations    -o CMakeFiles/cmTC_48b40.dir/CheckIncludeFile.c.o   -c /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_48b40
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48b40.dir/link.txt --verbose=1
+/usr/bin/cc  -rdynamic -O3 -fPIC -ggdb -std=c11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations     -rdynamic CMakeFiles/cmTC_48b40.dir/CheckIncludeFile.c.o  -o cmTC_48b40 
+make[2]: 离开目录“/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/CMakeTmp”
+make[1]: 离开目录“/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7dff9/fast && make[1]: 进入目录“/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_7dff9.dir/build.make CMakeFiles/cmTC_7dff9.dir/build
+make[2]: 进入目录“/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_7dff9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -rdynamic -O3 -fPIC -ggdb -std=c11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_7dff9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7dff9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7dff9.dir/link.txt --verbose=1
+/usr/bin/cc  -rdynamic -O3 -fPIC -ggdb -std=c11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_7dff9.dir/CheckFunctionExists.c.o  -o cmTC_7dff9  -lpthread 
+make[2]: 离开目录“/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/CMakeTmp”
+make[1]: 离开目录“/media/llaron/7E96ADB696AD6F79/代码/高性能服务器/autoli-server/CMakeFiles/CMakeTmp”
+
+
+
